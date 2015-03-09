@@ -45,18 +45,21 @@ ul#hLink {
 }
 ul#hLink li {
 	display: inline-block; 
-	width: 190px;
+	width: 188px;
 	padding: 5px; margin: 5px 0 0 0;
 	float: left;
-	//border: solid 1px rgba(200,200,200,1);
+	border: solid 1px rgba(200,200,200,1);
 	border-radius: 3px;
 	
 	background-color: rgba(229,229,229,1);
 	//background-color: white;
 	transition: all .1s;
 }
+ul#hLink li.shortPad {width: 78px;}
 ul#hLink li:hover {
 	background-color: rgba(229,229,229,1);
 	margin: 0 0 5px 0;
 	box-shadow: 0 5px 0px rgba(200,200,200,1);
 }
+ul#hLink li.disabled {color: rgba(200,200,200,1); background: rgba(250,250,250,0);}
+ul#hLink li.disabled:hover {margin: 5px 0 0 0; box-shadow: 0 0px 0px rgba(200,200,200,1);}

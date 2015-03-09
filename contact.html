@@ -57,7 +57,8 @@
 			letter-spacing: 1.4px;
 			line-height: .6;
 			
-			box-shadow: 0 8px 32px rgba(30,30,30,.5);
+			box-shadow: 0 8px 32px rgba(30,30,30,.2);
+			transition: all .5s;
 		}
 		
 		#contactCard a {text-decoration: none; color: white; transition: all .4s;}
@@ -72,16 +73,24 @@
 			font-size: 50px;
 			letter-spacing: 1.61px;
 		}
-		
-		
+		#contactCard:hover {
+			box-shadow: 0 8px 32px rgba(30,30,30,.5);
+		}
 		
 		section#info {
-			width: 500px;
-			padding-top: 20px;
+			width: 500px; overflow: hidden;
+			padding-top: 20px; margin-bottom: 100px;
 			//background: rgba(210,10,40,.2);
+			color: rgba(60,60,60,.8)
+		}
+		
+		p.descrip {
+			text-align: justify;
+			margin-bottom: 20px;
 		}
 		
 		#profileLink {
+			display: block;
 			margin: 0 0 20px; padding: 0;
 			list-style: none;
 			
@@ -90,7 +99,7 @@
 		}
 		#profileLink a {
 			text-decoration: none;
-			display: block;
+			display: block; overflow: visible;
 			float: left;
 			margin: 0 0 4px 0; padding: 0 0 0 40px; 
 			height: 32px; width: 210px;
@@ -140,7 +149,7 @@
 		
 		#profileLink a:hover {color: white; z-index: 10; box-shadow: 0 8px 32px rgba(30,30,30,.5);}
 		
-		
+		//media changes
 		
 		@media (min-height: 600px) {
 			#backBTN {
@@ -161,17 +170,20 @@
 	<section id="contactCard" class="content">
 		<h1>ALPHA-ZERO</h1>
 		<span><a href="">alpha-zero@live.com</a></span>
-		<a href="">fb.com/azezaroo</a>
+		<a href="http://fb.com/azezaroo">fb.com/azezaroo</a>
 	</section>
 	<section id="info" class="content">
+		<p class="descrip">
+			I'm a graphic artist! I like doing things like logos, web design, or just straight forward illustration. My art style is a kind of eastern but western but I think I have a diverse range as to what kind of style I can draw, even if I do kind of have signature features that's in all my work.
+		</p>
 		<div id="profileLink">
-			<a class="facebook" href="">azezaroo</a>
-			<a class="deviantart" href="">corrupted-azero</a>
+			<a class="facebook" href="http://fb.com/azezaroo">azezaroo</a>
+			<a class="deviantart" href="http://corrupted-azero.deviantart.com">corrupted-azero</a>
 			<a class="behance" href="">alpha-zero</a>
 			<a class="tumblr" href="">tumblr</a>
 			<a class="tumblr" href="">tumblr</a>
 			<a class="tumblr" href="">tumblr</a>
-			<a class="twitter" href="">azezaroo</a>
+			<a class="twitter" href="">@azezaroo</a>
 		</div>
 	</section>
 </body>
