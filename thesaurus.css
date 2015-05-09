@@ -122,9 +122,18 @@ ul#hLink li.disabled:active {height:16px; margin: 5px 0 0 0; box-shadow: 0 0px 0
 	display: block;
 	height: 100%;
 	padding: 32px 63px;
+	overflow:hidden;
 	/*background: rgba(210,80,0,.1);*/
 }
-.openingParagraph {font-size: 16px; font-weight: 300; padding-bottom:16px;}
+.openingParagraph {
+	margin-top: -42px; 
+	padding-bottom: 16px;
+	color: white;
+	font-size: 32px;
+	font-weight: 700; 
+	text-align: center;
+	text-transform:uppercase;
+}
 ul#productList{padding: 0; list-style-type: none; text-align: center;}
 li.product {
 	display: inline-block;
