@@ -23,6 +23,8 @@
 				} else {
 					$('#scrollTopbtn').css({"bottom":"-64px","opacity":"0"});
 				}
+				if ($(this).scrollTop() < 400) { // If this.scrollTop(distance from top) is less than 400, do this. This is for hiding and showing a down button.
+				}
 			});
 			
 			$('#scrollTopbtn').click(function () { //Animate the toTop button 
@@ -49,13 +51,30 @@
 	<a href="" id="scrollTopbtn">▲</a>
 	<section id="splash">
 		<div id="splashContent">
-			ALPHA-ZERO | AUTOMATIC-SPIRIT
-			<span>GRAPHICS AND ILLUSTRATION</span>
-			<ul id="hLink">
-				<a href="#contact" alt=""><li style="margin-right:20px">Contact</li></a>
-				<a href="http://byzero.tumblr.com" target="_blank" alt=""><li class="shortPad" style="margin-right:20px; background-color: rgba(207, 237, 255, 1);">Blog</li></a>
-				<a href="#projects" alt=""><li class="shortPad">Projects</li></a>
-			</ul>
+			<div id="splashTextContent">
+				ALPHA-ZERO
+				<span>Illustration and Design</span>
+			</div>
+			<div id="splashLinks">
+				<div class="SPL" style="transform: rotate(30deg)">
+					<a href="#" title=""  class="btnHit HitBtm HitInactive" style="transform: rotate(-30deg)"></a>
+				</div>
+				<div class="SPL" style="transform: rotate(60deg)">
+					<a href="#projects" title="CurrentProjects"  class="btnHit HitTop HitProjects" style="transform: rotate(-60deg)"></a>
+					<a href="http://corrupted-azero.deviantart.com" title="DeviantArt"  class="btnHit HitBtm HitDA" style="transform: rotate(-60deg)"></a>
+				</div>
+				<div class="SPL" style="transform: rotate(90deg)">
+					<a href="http://byzero.tumblr.com/" title="TumblrBlog" class="btnHit HitTop HitTu" style="transform: rotate(-90deg)"></a>
+					<a href="http://www.behance.net/ALPHA-ZERO" title="Behance"  class="btnHit HitBtm HitBe" style="transform: rotate(-90deg)"></a>
+				</div>
+				<div class="SPL" style="transform: rotate(120deg)">
+					<a href="#contact" title="Contact"  class="btnHit HitTop HitContact" style="transform: rotate(-120deg)"></a>
+					<a href="http://www.twitter.com/azezaroo" title="Twitter"  class="btnHit HitBtm HitTw" style="transform: rotate(-120deg)"></a>
+				</div>
+				<div class="SPL" style="transform: rotate(150deg)">
+					<a href="http://fb.com/azezaroo title="Facebook"  class="btnHit HitBtm HitFB" style="transform: rotate(-150deg)"></a>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section id="projects">
@@ -66,8 +85,8 @@
 				<li class="product" style="background-image:;">
 					<div class="projectDescription">
 						<div class="projectTitle">CITYWITCH</div>
-						<a class="projectLink">citywit.ch</a>
-						<a class="projectLink">Comic Blog</a>
+						<a class="projectLink inactive">citywit.ch</a>
+						<a class="projectLink inactive">Comic Blog</a>
 						<div class="description">My main project is a comic story about a girl named Annie who becomes a witch in a modern setting. </div>
 					</div>
 				</li>
@@ -75,8 +94,16 @@
 					<div class="projectDescription">
 						<div class="projectTitle">KI-RUSH</div>
 						<a href="http://kirush3030x.webflow.com/" class="projectLink">Website</a>
-						<a class="projectLink">Behance Article</a>
+						<a class="projectLink inactive">Behance Article</a>
 						<div class="description">I've started working on a setting based on racers in a futuristic time. The website is a mock-up invitation to participating in what is known as the KI-RUSH, a universe-famous rally tournament currently in its 80th anniversary.<div>
+					</div>
+				</li>
+				</li>
+				<li class="product" style="background-image:url(ourobosesmorzar.png);">
+					<div class="projectDescription">
+						<div class="projectTitle">(D&D) Esmorzar Ourobos</div>
+						<a href="http://alpha-zero.github.io/DDEsmorzar/" class="projectLink">Website</a>
+						<div class="description">I've created a universe for a D&D RPG Campaign. I find these collaborative roleplaying games helpful in exercising creativity since it applies improvisation and planning. For this, I created the the mythos of the planet and the world map which is prominent on the website link. <div>
 					</div>
 				</li>
 			</ul>
