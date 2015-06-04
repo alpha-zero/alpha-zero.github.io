@@ -189,7 +189,7 @@ li.product {
 	position:absolute;
 	display: block; 
 	padding: 308px 8px 8px;
-	height:284px; 
+	height:284px;  width: 284px;
 	transition: all .4s;
 	opacity:0;
 	z-index:10;
