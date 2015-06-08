@@ -258,7 +258,7 @@ li.product {
 a.portfolioDL {
 	display:block;
 	margin: 16px auto; padding-left: 28px;
-	width: 140px; height: 24px;
+	width: 200px; height: 24px;
 	background: url(iconschool.png) white top left no-repeat;
 	background-position: 0 -160px;
 	border: 1px solid rgba(120,120,120,1);
@@ -269,7 +269,10 @@ a.portfolioDL {
 	line-height: 24px;
 	text-align: left;
 	text-transform: uppercase;
+	transition: transform .322s;
 }
+a.portfolioDL:hover {
+	transform: scale(1.1);}
 
 #profileLinks {
 	width:500px; 
@@ -302,5 +305,6 @@ a.portfolioDL {
 #profileLinks a.twitter {color: #2290bf; background-position: 0px -128px;}
 #profileLinks a.dribbble {color: #ea4c89; background-position: 0px -208px;}
 #profileLinks a.instagram{color: #3f729b; background-position: 0px -240px;}
+#profileLinks a.designbyhumans{color: #00aeef; background-position: 0px -272px;}
 
 	/**** And so we Flow, into the abyss ****/	/**** And so we Flow, into the abyss ****/
