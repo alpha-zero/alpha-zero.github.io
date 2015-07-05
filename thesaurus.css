@@ -130,7 +130,7 @@ section {
 	.HitFB {background-color: #3b5998; background-position: 0px -240px;}
 	.HitTu {background-color: #36465d; background-position: 0px -300px;}
 	.HitTw {background-color: #2290bf; background-position: 0px -360px;}
-	.HitDr {background-color: #ea4c89; background-position: 0px -420px;}
+	.HitGH {background-color: #44a340; background-position: 0px -420px;}
 	
 	.HitInactive {border: solid 1px rgba(100,100,100,.5); background: none;}
 	.HitInactive:hover {box-shadow: 0 0 0;}
