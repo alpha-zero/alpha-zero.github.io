@@ -278,7 +278,7 @@ a.portfolioDL:hover {
 
 #profileLinks {
 	width:500px; 
-	margin: 0 auto; padding: 0;
+	margin: 0 auto 200px; padding: 0;
 	list-style-type:none;
 } 
 
