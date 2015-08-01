@@ -12,35 +12,41 @@
 		@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:400,700);
 		
 		body {
-			font-family: 'Roboto Slab', serif;
+			margin: 0; padding: 0;
+			font-family: 'Roboto Slab', 'Georgia', serif;
 			font-size: 12px; font-weight: 400; color: rgb(13,13,13);
 			
-			//background: rgb(60,70,90);
-			//background: rgb(253, 218, 97);
+			//background: rgb(253, 218, 97); //yellow
 		}
 		H1, H2 {font-family: 'Montserrat', sans-serif; text-transform: uppercase;}
 		H1 {font-size: 18px;} H2 {font-size: 16px;}
 		H1 {border-bottom: 1px solid black;}
 		
 		#go-back-button {
-			display: block; position: fixed;
-			height: 32px; line-height:32px;
-			margin-top:35px; padding: 0 5px;
+			display: none; position: fixed;
+			width: 50px; height: 60px; line-height:60px;
+			margin-top:-121px; padding: 0 5px;
 			background: rgba(220,220,220,1);
-			box-shadow: 0 0 4px rgba(50,50,50,.5);
+			box-shadow: 0 0 16px rgba(0,0,0,.2);
+			border-radius: 32px;
+			overflow: hidden;
 			
+			text-align: center;
 			text-transform: uppercase;
 			text-decoration: none;
+			color: rgb(13,13,13);
 			
 			z-index:99;
+			
+			opacity: .75;
+			transition: opacity .64s ease-in-out, margin-left .5s ease-in-out;
 		}
+		#go-back-button:hover {opacity: 1;transition: opacity .1s ease-in-out;}
 		
-		#container {width: 560px;margin: 0 auto;}
-		@media (min-width: 960px) {#container {width: 940px;}}
-		@media (min-width: 1600px) {#container {width: 1510px;}}
+		#container {width: 320px;margin: 0 auto; }
 		
 		#pageHeader {
-			padding: 32px 0;
+			margin: 0 auto; padding: 32px 0;
 			font-family: 'Montserrat', sans-serif; 
 			text-transform: uppercase;
 			font-size: 32px; font-weight:700;
@@ -49,7 +55,6 @@
 		#pageHeader span {
 			display: block; height: auto;
 		}
-		
 		
 		.filterform {
 			display: block; position: relative;
@@ -71,23 +76,24 @@
 		#container ul li {
 			display: inline-block;
 			position:relative;
-			width: 180px; height: 220px;
+			width: 100px; height: 100px;
 			margin: 5px;
 			font-size:10px;
 			overflow:hidden;
 			
 			background: rgba(0,0,0,.0);
 			opacity:.9;
-			transition: all .4s ease-in-out;
+			transition: background .4s ease-in-out, opacity .4s ease-in-out;
 		}
-		#container ul li img { float: right;
-			width: auto; height: auto;  margin: 0; padding: 10px;
-			max-width: 160px; max-height: 160px;
+		#container ul li img { 
+			float: right;
+			width: auto; height: auto;  margin: 0; padding: 5px;
+			max-width: 90px; max-height: 90px;
 		}
-		#container ul li span {position:absolute; display: inline-block; top:194px;}
+		#container ul li span {position:absolute; display: none; top:104px;}
 		#container ul li span i {opacity: .64;}
 		#container ul li:hover {background: rgba(0,0,0,.064);opacity:1;
-			transition: all .08s ease-in-out;}
+			transition: background .08s ease-in-out, opacity .08s ease-in-out;}
 			
 		footer {
 			display: block;
@@ -95,13 +101,40 @@
 			margin-top: 16px; padding-top: 5px;
 			border-top: 1px solid rgba(13,13,13,1);
 			
-			font-size: 10px;
+			font-size: 8px;
 			font-family: 'Montserrat', sans-serif; 
 			text-transform: uppercase;
 		}
 		footer span {display: inline-block; float: right;}
 		footer a {text-decoration: none; color:rgba(13,13,13,1);}
 		footer a:hover {text-decoration: underline;}
+		
+		@media (min-width: 600px) {
+			#go-back-button {display: block;}
+			
+			#pageHeader {
+				position: fixed; 
+				left: 0; right: 0;
+				margin-left:auto; margin-right: auto;
+				background-color: rgba(255,255,255,.8);
+				z-index: 90;
+			}
+			
+			#container {padding-top: 142px; width: 560px;}			
+			
+			#container ul li {width: 180px; height: 220px;}
+			#container ul li img { 
+				float: right;
+				margin: 0; padding: 10px;
+				width: auto; height: auto;  
+				max-width: 160px; max-height: 160px;
+			}
+			#container ul li span { display: inline;top:194px;}
+			
+			footer {font-size: 10px;}
+		}
+		@media (min-width: 960px) {#container {width: 940px;}}
+		@media (min-width: 1600px) {#container {width: 1510px;}}
 	</style>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -125,10 +158,10 @@
 					if(filter) {
 						// this finds all links in a list that contain the input,
 						// and hide the ones not containing the input while showing the ones that do
-						$(list).find("li:not(:Contains(" + filter + "))").slideUp();
-						$(list).find("li:Contains(" + filter + ")").slideDown();
+						$(list).find("li:not(:Contains(" + filter + "))").fadeOut(120);
+						$(list).find("li:Contains(" + filter + ")").fadeIn(120);
 					} else {
-						$(list).find("li").slideDown();
+						$(list).find("li").fadeIn(120);
 					}
 					return false;
 				})
@@ -143,12 +176,23 @@
 			listFilter($("#pageHeader"), $(".list"));
 			});
 		}(jQuery));
+		
+		/**$(document).ready(function(){
+			$(window).scroll(function(){ //Runs this function every time a scroll event is recognised
+				if ($(this).scrollTop() > 128) { //if this.scrollTop(distance from top) value is greater than x
+					$('#go-back-button').css({"margin-left":"-80px"});
+				} else {
+					$('#go-back-button').css({"margin-left":"0"});
+				}
+			});
+		});**/
 	</script>
 </head>
 <body>
+	<header id="pageHeader"><div class="title">Logobase</div></header>
 	<section id="container">
 		<a href="http://alpha-zero.github.io" id="go-back-button">Return</a><!-- this should be a go-back to main page button -->
-		<header id="pageHeader"><div class="title">Logobase</div></header>
+		
 		<h1>Identity</h1>
 		<ul class="list">
 			<li><img src="LBImages/oreza01.png" /><span>OREZA 01</li><li><img src="LBImages/oreza02.png" /><span>OREZA 02<span></li><li><img  src="LBImages/oreza03.png" /><span>OREZA 03<span></li><li><img  src="LBImages/ego01.png" /><span>EGO 01<span></li><li><img  src="LBImages/ego02.png" /><span>EGO 02<span></li>
