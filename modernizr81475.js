@@ -1,6 +1,6 @@
 /*!
  * modernizr v3.0.0-alpha.3
- * Build http://v3.modernizr.com/download/#-borderradius-boxshadow-csstransforms-csstransforms3d-csstransitions-cssvhunit-cssvwunit-fontface-opacity-rgba-dontmin
+ * Build http://v3.modernizr.com/download/#-borderradius-boxshadow-csstransforms-csstransforms3d-csstransitions-cssvhunit-cssvminunit-cssvwunit-fontface-opacity-rgba-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -26,14 +26,6 @@
 ;(function(window, document, undefined){
   var classes = [];
   
-
-  /**
-   * is returns a boolean for if typeof obj is exactly type.
-   */
-  function is( obj, type ) {
-    return typeof obj === type;
-  }
-  ;
 
   var tests = [];
   
@@ -92,6 +84,14 @@
   Modernizr = new Modernizr();
 
   
+
+  /**
+   * is returns a boolean for if typeof obj is exactly type.
+   */
+  function is( obj, type ) {
+    return typeof obj === type;
+  }
+  ;
 
   // Run through all tests and detect their support in the current UA.
   function testRunner() {
@@ -185,14 +185,6 @@
 
   ;
 
-  // List of property values to set for css tests. See ticket #21
-  var prefixes = (ModernizrProto._config.usePrefixes ? ' -webkit- -moz- -o- -ms- '.split(' ') : []);
-
-  // expose these for the plugin API. Look in the source for how to join() them against your input
-  ModernizrProto._prefixes = prefixes;
-
-  
-
   var createElement = function() {
     if (typeof document.createElement !== 'function') {
       // This is the case in IE7, where the type of createElement is "object".
@@ -224,6 +216,14 @@
     return ('' + style.backgroundColor).indexOf('rgba') > -1;
   });
 
+
+  // List of property values to set for css tests. See ticket #21
+  var prefixes = (ModernizrProto._config.usePrefixes ? ' -webkit- -moz- -o- -ms- '.split(' ') : []);
+
+  // expose these for the plugin API. Look in the source for how to join() them against your input
+  ModernizrProto._prefixes = prefixes;
+
+  
 /*!
 {
   "name": "CSS Opacity",
@@ -272,6 +272,13 @@
   var oldSyntax = 'supportsCSS' in window;
   Modernizr.addTest('supports', newSyntax || oldSyntax);
 
+
+  // Change the function's scope.
+  function roundedEquals(a, b) {
+    return a - 1 === b || a === b || a + 1 === b;
+  }
+
+  ;
 
   function getBody() {
     // After page load injecting a fake body doesn't work so check if body exists
@@ -424,6 +431,38 @@
 
 /*!
 {
+  "name": "CSS vmin unit",
+  "property": "cssvminunit",
+  "caniuse": "viewport-units",
+  "tags": ["css"],
+  "builderAliases": ["css_vminunit"],
+  "notes": [{
+    "name": "Related Modernizr Issue",
+    "href": "https://github.com/Modernizr/Modernizr/issues/572"
+  },{
+    "name": "JSFiddle Example",
+    "href": "http://jsfiddle.net/glsee/JRmdq/8/"
+  }]
+}
+!*/
+
+  testStyles('#modernizr1{width: 50vm;width:50vmin}#modernizr2{width:50px;height:50px;overflow:scroll}', function() {
+    var elem = document.getElementById('modernizr1');
+    var scroller = document.getElementById('modernizr2');
+    var scrollbarWidth = parseInt((scroller.offsetWidth - scroller.clientWidth) / 2, 10);
+
+    var one_vw = docElement.clientWidth/100;
+    var one_vh = docElement.clientHeight/100;
+    var expectedWidth = parseInt(Math.min(one_vw, one_vh) * 50, 10);
+    var compWidth = parseInt((window.getComputedStyle ?
+                          getComputedStyle(elem, null) :
+                          elem.currentStyle)['width'],10);
+
+    Modernizr.addTest('cssvminunit', roundedEquals(expectedWidth, compWidth) || roundedEquals(expectedWidth, compWidth - scrollbarWidth));
+  }, 2);
+
+/*!
+{
   "name": "CSS vw unit",
   "property": "cssvwunit",
   "caniuse": "viewport-units",
@@ -479,6 +518,15 @@
 
   ;
 
+  // Helper function for converting kebab-case to camelCase,
+  // e.g. box-sizing -> boxSizing
+  function cssToDOM( name ) {
+    return name.replace(/([a-z])-([a-z])/g, function(str, m1, m2) {
+      return m1 + m2.toUpperCase();
+    }).replace(/^-/, '');
+  }
+  ;
+
   // Change the function's scope.
   function fnBind(fn, that) {
     return function() {
@@ -518,14 +566,32 @@
 
   ;
 
-  // Helper function for converting kebab-case to camelCase,
-  // e.g. box-sizing -> boxSizing
-  function cssToDOM( name ) {
-    return name.replace(/([a-z])-([a-z])/g, function(str, m1, m2) {
-      return m1 + m2.toUpperCase();
-    }).replace(/^-/, '');
-  }
-  ;
+  /**
+   * Create our "modernizr" element that we do most feature tests on.
+   */
+  var modElem = {
+    elem : createElement('modernizr')
+  };
+
+  // Clean up this element
+  Modernizr._q.push(function() {
+    delete modElem.elem;
+  });
+
+  
+
+  var mStyle = {
+    style : modElem.elem.style
+  };
+
+  // kill ref for gc, must happen before
+  // mod.elem is removed, so we unshift on to
+  // the front of the queue.
+  Modernizr._q.unshift(function() {
+    delete mStyle.style;
+  });
+
+  
 
   // Helper function for converting camelCase to kebab-case,
   // e.g. boxSizing -> box-sizing
@@ -566,33 +632,6 @@
     return undefined;
   }
   ;
-
-  /**
-   * Create our "modernizr" element that we do most feature tests on.
-   */
-  var modElem = {
-    elem : createElement('modernizr')
-  };
-
-  // Clean up this element
-  Modernizr._q.push(function() {
-    delete modElem.elem;
-  });
-
-  
-
-  var mStyle = {
-    style : modElem.elem.style
-  };
-
-  // kill ref for gc, must happen before
-  // mod.elem is removed, so we unshift on to
-  // the front of the queue.
-  Modernizr._q.unshift(function() {
-    delete mStyle.style;
-  });
-
-  
 
   // testProps is a generic CSS / DOM property test.
 
@@ -753,6 +792,21 @@
 
 /*!
 {
+  "name": "Box Shadow",
+  "property": "boxshadow",
+  "caniuse": "css-boxshadow",
+  "tags": ["css"],
+  "knownBugs": [
+    "WebOS false positives on this test.",
+    "The Kindle Silk browser false positives"
+  ]
+}
+!*/
+
+  Modernizr.addTest('boxshadow', testAllProps('boxShadow', '1px 1px', true));
+
+/*!
+{
   "name": "CSS Transforms",
   "property": "csstransforms",
   "caniuse": "transforms2d",
@@ -766,21 +820,6 @@
     return navigator.userAgent.indexOf('Android 2.') === -1 &&
            testAllProps('transform', 'scale(1)', true);
   });
-
-/*!
-{
-  "name": "Box Shadow",
-  "property": "boxshadow",
-  "caniuse": "css-boxshadow",
-  "tags": ["css"],
-  "knownBugs": [
-    "WebOS false positives on this test.",
-    "The Kindle Silk browser false positives"
-  ]
-}
-!*/
-
-  Modernizr.addTest('boxshadow', testAllProps('boxShadow', '1px 1px', true));
 
 /*!
 {
