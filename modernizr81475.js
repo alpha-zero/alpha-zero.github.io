@@ -1,6 +1,6 @@
 /*!
  * modernizr v3.0.0-alpha.3
- * Build http://v3.modernizr.com/download/#-borderradius-boxshadow-csstransforms-csstransforms3d-csstransitions-cssvhunit-cssvminunit-cssvwunit-fontface-opacity-rgba-dontmin
+ * Build http://v3.modernizr.com/download/#-borderradius-boxshadow-csstransforms-csstransforms3d-csstransitions-cssvhunit-cssvminunit-cssvwunit-fontface-opacity-rgba-textshadow-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -873,6 +873,28 @@
 !*/
 
   Modernizr.addTest('csstransitions', testAllProps('transition', 'all', true));
+
+
+  // Modernizr.testProp() investigates whether a given style property is recognized
+  // Property names can be provided in either camelCase or kebab-case.
+  // Modernizr.testProp('pointerEvents')
+  // Also accepts optional 2nd arg, of a value to use for native feature detection, e.g.:
+  // Modernizr.testProp('pointerEvents', 'none')
+  var testProp = ModernizrProto.testProp = function( prop, value, useValue ) {
+    return testProps([prop], undefined, value, useValue);
+  };
+  
+/*!
+{
+  "name": "CSS textshadow",
+  "property": "textshadow",
+  "caniuse": "css-textshadow",
+  "tags": ["css"],
+  "knownBugs": ["FF3.0 will false positive on this test"]
+}
+!*/
+
+  Modernizr.addTest('textshadow', testProp('textShadow', '1px 1px'));
 
 
   // Run each test
