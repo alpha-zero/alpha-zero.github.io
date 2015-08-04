@@ -1,3 +1,6 @@
+
+	/** We rise, as a feather in the warming light **/	/** We rise, as a feather in the warming light **/
+
 @font-face {
 	font-family: 'ostrich_sans_roundedmedium';
 	src: url('ostrich-rounded-webfont.eot');
@@ -172,8 +175,8 @@ ul#productList{padding: 0; list-style-type: none; text-align: center;}
 li.product {
 	position:relative;
 	display: inline-block;
-	height: 300px; width: 300px;
 	margin: 0px; padding: 0;
+	height: 300px; width: 300px;
 	overflow: hidden;
 	box-shadow: 0 4px 16px rgba(64,64,64,.33);
 	
@@ -188,6 +191,7 @@ li.product {
 .projectDescription {
 	position:absolute;
 	display: block; 
+	clear: both;
 	padding: 308px 8px 8px;
 	height:284px;  width: 284px;
 	transition: all .4s;
@@ -200,14 +204,15 @@ li.product {
 	opacity:1;}
 .projectTitle {display:block;font-size:16px;font-weight:700;}
 .projectLink {
-	display: block;
-	padding-left: 24px;
+	display: inline-block; float: left;
+	padding-left: 24px; margin-right: 8px;
 	height: 24px;
 	background: url(iconschool.png) top left no-repeat;
 	background-position: 0 -184px;
 	font-size:12px; text-transform: uppercase;
 	text-decoration: underline; line-height:24px;
 }
+.projectDescription .description { clear: both;}
 .projectDescription a {color: white;}
 .projectDescription a:hover {color: rgba(244, 19, 113,1);}
 .projectDescription .inactive {opacity:.5}
@@ -298,9 +303,7 @@ a.portfolioDL:hover {
 	
 	transition: background-color .3s, opacity .3s;
 }
-#profileLinks a:hover {
-	opacity: 1;
-	background-color: rgba(32,32,32,.1)}
+#profileLinks a:hover {opacity: 1; background-color: rgba(32,32,32,.1)}
 #profileLinks a.behance {color: #0096ff;}
 #profileLinks a.deviantart {color: #05cc47; background-position: 0px -32px;}
 #profileLinks a.facebook {color: #3b5998; background-position: 0px -64px;}
