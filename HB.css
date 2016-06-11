@@ -1,0 +1,59 @@
+/* *** 		HOME BASE 		*** */
+/* This is the sheet made to set base values and global properties */
+
+/* IMPORTS	*** */
+
+/*Arimo*/
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,700italic,400italic,700); 
+
+/* RESETS	*** */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* FONTS 	*** */
+
+body {
+	font-family: "Arimo", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {}
+
+h1 {}
+
+/* BASE 	*** */
+
+body {
+}
+
+.ccontainer {
+	margin: 0; padding: 0;
+	border-left: 4px solid red;
+	border-right: 4px solid red;
+	min-height: 100vh;
+}
+
+.conblock {
+	display: block;
+	margin: 0 auto;
+}
+
+a.returnbtn {
+	display: inline-block;
+	padding: 6px;
+	padding-left: 16px;
+	background: red;
+	
+	text-transform: uppercase;
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+	
+	transition: padding .4s ease-out;
+}
+a.returnbtn:hover {padding-left:6px; transition: padding .1s ease-out;}
+
+/* RESIZING	*** */
+
