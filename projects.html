@@ -48,52 +48,80 @@
 			});
 		});
 	</script>
+    <style type="text/css">
+    nav {
+        position: fixed;
+        top: 0;
+        display: block;
+        margin-top: 16px;
+        width: 100%; height: 64px;
+    }
+    #gohome {
+        margin-left: 16px;
+        display: block;
+        width: 78px; height: 64px;
+
+        font-size: 0;
+        text-align: center;
+        background-image: url(spritesheet.png);
+        background-repeat: no-repeat;
+        background-position: 0 -100px;
+        transition: all 1s;
+    }
+    #gohome:hover{
+        margin-left: 32px;
+        transition: all .5s;
+    }
+    </style>
 </head>
 <body>
-<section id="projects">
-    <div id="projectsContent">
-        <p class="openingParagraph">Currently Active Projects*</p>
-        <ul id="productList">
-        <!-- The product box size is 300px h * 420px w -->
-            <li class="product" style="background-image:url(product-citywitch.png);">
-                <div class="projectDescription">
-                    <div class="projectTitle">CITYWITCH</div>
-                    <a class="projectLink inactive">citywit.ch</a>
-                    <a class="projectLink inactive">Comic Blog</a>
-                    <div class="description">A comic I produce about Annie, a girl who struggles coming to terms with what it takes to become a witch in a modern era. </div>
-                </div>
-            </li>
-            <li class="product" style="background-image:url(product-kirush3030x.png);">
-                <div class="projectDescription">
-                    <div class="projectTitle">KI-RUSH</div>
-                    <a href="http://kirush3030x.webflow.com/" class="projectLink">Webpage</a>
-                    <a class="projectLink inactive">Behance Article</a>
-                    <div class="description">In a futuristic dystopia there's a universe-famous rally race called the KI-RUSH Grand Prix. This is about that setting. This is a website based around that setting and what the invitation to the KI-RUSH GP would look like.<div>
-                </div>
-            </li>
-            <li class="product" style="background-image:url(ourobosesmorzar.png);">
-                <div class="projectDescription">
-                    <div class="projectTitle">(D&D) Orobos</div>
-                    <a href="http://alpha-zero.github.io/DDEsmorzar/" class="projectLink">Webpage</a>
-                    <div class="description">I've been building a fantasy world called Ourobos originally for a Dungeons & Dragons campaign. I find these collaborative roleplaying games helpful in exercising creativity since it applies improvisation and planning. For this, I created the the mythos of the planet and the world map which is prominent on the website link. <div>
-                </div>
-            </li>
-            <li class="product" style="background-image:url(product-logobase.jpg); background-size:300px 300px;">
-                <div class="projectDescription">
-                    <div class="projectTitle">Logobase</div>
-                    <a target="_self" href="logobase.html" class="projectLink">Webpage</a>
-                    <div class="description">A small library of personal logos I've created including my personal (a) logo.<div>
-                </div>
-            </li>
-            <!--<li class="product" style="background-image:url(product-lfsol.png);">
-                <div class="projectDescription">
-                    <div class="projectTitle">Looking for Signs of Life</div>
-                    <a href="http://alpha-zero.github.io/DDEsmorzar/" class="projectLink">COMIC</a>
-                    <div class="description">A pastelly digitally drawn webcomic about a clouds everyday thoughts with an ongoing story about his life.<div>
-                </div>
-            </li>-->
-        </ul>
-    </div>
-</section>
+    <nav>
+        <a id="gohome" title="Return to splash" href="index.html" target="_self">Back</a>
+    </nav>
+    <section id="projects">
+        <div id="projectsContent">
+            <p class="openingParagraph">Currently Active Projects*</p>
+            <ul id="productList">
+            <!-- The product box size is 300px h * 420px w -->
+                <li class="product" style="background-image:url(product-citywitch.png);">
+                    <div class="projectDescription">
+                        <div class="projectTitle">CITYWITCH</div>
+                        <a class="projectLink inactive">citywit.ch</a>
+                        <a class="projectLink inactive">Comic Blog</a>
+                        <div class="description">A comic I produce about Annie, a girl who struggles coming to terms with what it takes to become a witch in a modern era. </div>
+                    </div>
+                </li>
+                <li class="product" style="background-image:url(product-kirush3030x.png);">
+                    <div class="projectDescription">
+                        <div class="projectTitle">KI-RUSH</div>
+                        <a href="http://kirush3030x.webflow.com/" class="projectLink">Webpage</a>
+                        <a class="projectLink inactive">Behance Article</a>
+                        <div class="description">In a futuristic dystopia there's a universe-famous rally race called the KI-RUSH Grand Prix. This is about that setting. This is a website based around that setting and what the invitation to the KI-RUSH GP would look like.</div>
+                    </div>
+                </li>
+                <li class="product" style="background-image:url(ourobosesmorzar.png);">
+                    <div class="projectDescription">
+                        <div class="projectTitle">(D&D) Orobos</div>
+                        <a href="http://alpha-zero.github.io/DDEsmorzar/" class="projectLink">Webpage</a>
+                        <div class="description">I've been building a fantasy world called Ourobos originally for a Dungeons & Dragons campaign. I find these collaborative roleplaying games helpful in exercising creativity since it applies improvisation and planning. For this, I created the the mythos of the planet and the world map which is prominent on the website link. </div>
+                    </div>
+                </li>
+                <li class="product" style="background-image:url(product-logobase.jpg); background-size:300px 300px;">
+                    <div class="projectDescription">
+                        <div class="projectTitle">Logobase</div>
+                        <a target="_self" href="logobase.html" class="projectLink">Webpage</a>
+                        <div class="description">A small library of personal logos I've created including my personal (a) logo.</div>
+                    </div>
+                </li>
+                <!--<li class="product" style="background-image:url(product-lfsol.png);">
+                    <div class="projectDescription">
+                        <div class="projectTitle">Looking for Signs of Life</div>
+                        <a href="http://alpha-zero.github.io/DDEsmorzar/" class="projectLink">COMIC</a>
+                        <div class="description">A pastelly digitally drawn webcomic about a clouds everyday thoughts with an ongoing story about his life.<div>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+    </section>
 </body>
 </html>

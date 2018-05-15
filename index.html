@@ -56,8 +56,9 @@
             transition: all .5s;
 
             text-align: center;
-            background-image: url(splash-ss.png);
+            background-image: url(spritesheet.png);
             background-repeat: no-repeat;
+            -webkit-filter: grayscale(.3);
             filter: grayscale(.3);
         }
         .objective:hover {margin: 0; outline: 0px solid transparent;border: 10px solid rgba(204,204,204,1); filter:grayscale(0);}
@@ -67,7 +68,10 @@
         .objective.fbk { background-color: rgb(59,88,151) ;}
         .objective.tmb { background-color: rgb(52,69,91) ;}
         .objective.gtb { background-color: rgb(142,36,205) ;}
+        .objective.dev { background-color: rgb(0,204,51) ;}
         .objective {font-size: 0;}
+        .objective.inactive {-webkit-filter: grayscale(1); filter: grayscale(1); opacity: 0.5;}
+        .objective.inactive:hover {margin: 10px;outline: 10px solid transparent;border: 0px solid rgba(204,204,204,1);}
 
         footer {
             z-index: 99;
@@ -84,6 +88,7 @@
             text-transform: uppercase;
             color: black;
             transition: all .5s;
+            background-color: rgba(255,255,255,.5);
         }
         footer a:hover {background-color: rgba(102,102,102,.3)}
     </style>
@@ -96,7 +101,7 @@
             <a class="objective fbk" style="position: absolute; top: 62px; left: 286px; background-position: -100px 0;" href="https://fb.com/azezaroo">facebook</a>
             <a class="objective tmb" style="position: absolute; top: 287px; left: 62px; background-position: 0 -50px;" href="https://byzero.tumblr.com">blog</a>
             <a class="objective gtb" style="position: absolute; top: 333px; left: 175px; background-position: -50px -50px;" href="https://github.com/alpha-zero">github</a>
-            <!-- <a class="objective" style="position: absolute; top: 287px; left: 286px; background-position: -100px -50px;" href="#"></a> -->
+            <a class="objective dev inactive" style="position: absolute; top: 287px; left: 286px; background-position: -100px -50px;">deviantart</a>
 		</div>
 	</section>
     <footer>
