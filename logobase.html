@@ -1,28 +1,28 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en" class="no-js"">
+<html lang="en" class="no-js">
 <head>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
+
     <title>LOGOBASE - ALPHA-ZERO</title>
 	<link rel=icon href="favicon.png" type="image/png">
-	
+
 	<style type="text/css">
 		@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:400,700);
-		
+
 		body {
 			margin: 0; padding: 0;
 			font-family: 'Roboto Slab', 'Georgia', serif;
 			font-size: 12px; font-weight: 400; color: rgb(13,13,13);
-			
+
 			//background: rgb(253, 218, 97); //yellow
 		}
 		H1, H2 {font-family: 'Montserrat', sans-serif; text-transform: uppercase;}
 		H1 {font-size: 18px;} H2 {font-size: 16px;}
 		H1 {border-bottom: 1px solid black;}
-		
+
 		#go-back-button {
 			display: none; position: fixed;
 			width: 50px; height: 60px; line-height:60px;
@@ -32,25 +32,25 @@
 			box-shadow: 0 0 16px rgba(0,0,0,.2);
 			border-radius: 32px;
 			overflow: hidden;
-			
+
 			text-align: center;
 			text-transform: uppercase;
 			text-decoration: none;
 			//color: rgb(13,13,13);
 			color: rgb(220,220,220);
-			
+
 			z-index:99;
-			
+
 			opacity: .75;
 			transition: opacity .64s ease-in-out, margin-left .5s ease-in-out;
 		}
 		#go-back-button:hover {opacity: .9;transition: opacity .1s ease-in-out;}
-		
+
 		#container {width: 320px;margin: 0 auto; }
-		
+
 		#pageHeader {
 			margin: 0 auto; padding: 32px 0;
-			font-family: 'Montserrat', sans-serif; 
+			font-family: 'Montserrat', sans-serif;
 			text-transform: uppercase;
 			font-size: 32px; font-weight:700;
 			text-align: center;
@@ -58,7 +58,7 @@
 		#pageHeader span {
 			display: block; height: auto;
 		}
-		
+
 		.filterform {
 			display: block; position: relative;
 		}
@@ -83,12 +83,12 @@
 			margin: 5px;
 			font-size:10px;
 			overflow:hidden;
-			
+
 			background: rgba(0,0,0,.0);
 			opacity:.9;
 			transition: background .4s ease-in-out, opacity .4s ease-in-out;
 		}
-		#container ul li img { 
+		#container ul li img {
 			float: right;
 			width: auto; height: auto;  margin: 0; padding: 5px;
 			max-width: 90px; max-height: 90px;
@@ -97,43 +97,43 @@
 		#container ul li span i {opacity: .64;}
 		#container ul li:hover {background: rgba(0,0,0,.064);opacity:1;
 			transition: background .08s ease-in-out, opacity .08s ease-in-out;}
-			
+
 		footer {
 			display: block;
 			min-height: 59px;
 			margin-top: 16px; padding-top: 5px;
 			border-top: 1px solid rgba(13,13,13,1);
-			
+
 			font-size: 8px;
-			font-family: 'Montserrat', sans-serif; 
+			font-family: 'Montserrat', sans-serif;
 			text-transform: uppercase;
 		}
 		footer span {display: inline-block; float: right;}
 		footer a {text-decoration: none; color:rgba(13,13,13,1);}
 		footer a:hover {text-decoration: underline;}
-		
+
 		@media (min-width: 600px) {
 			#go-back-button {display: block;}
-			
+
 			#pageHeader {
-				position: fixed; 
+				position: fixed;
 				left: 0; right: 0;
 				margin-left:auto; margin-right: auto;
 				background-color: rgba(255,255,255,.8);
 				z-index: 90;
 			}
-			
-			#container {padding-top: 142px; width: 560px;}			
-			
+
+			#container {padding-top: 142px; width: 560px;}
+
 			#container ul li {width: 180px; height: 220px;}
-			#container ul li img { 
+			#container ul li img {
 				float: right;
 				margin: 0; padding: 10px;
-				width: auto; height: auto;  
+				width: auto; height: auto;
 				max-width: 160px; max-height: 160px;
 			}
 			#container ul li span { display: inline;top:194px;}
-			
+
 			footer {font-size: 10px;}
 		}
 		@media (min-width: 960px) {#container {width: 940px;}}
@@ -149,12 +149,12 @@
 			};
 
 			function listFilter(header, list) { // header is any element, list is an unordered list
-				
+
 				// create and add the filter form to the header
 				var form = $("<form>").attr({"class":"filterform","action":"#"}),
 					input = $("<input>").attr({"class":"filterinput","type":"text","id":"searchFilter","placeholder":"Filter"});
 				$(form).append(input).appendTo(header);
-				
+
 
 				$(input)
 				.change( function () {
@@ -180,7 +180,7 @@
 			listFilter($("#pageHeader"), $(".list"));
 			});
 		}(jQuery));
-		
+
 		/**$(document).ready(function(){
 			$(window).scroll(function(){ //Runs this function every time a scroll event is recognised
 				if ($(this).scrollTop() > 128) { //if this.scrollTop(distance from top) value is greater than x
@@ -196,7 +196,7 @@
 	<header id="pageHeader"><div class="title">Logobase</div></header>
 	<section id="container">
 		<a href="http://alpha-zero.github.io" id="go-back-button">Return</a><!-- this should be a go-back to main page button -->
-		
+
 		<h1>Identity</h1>
 		<ul class="list">
 			<li><img src="LBImages/oreza01.png" /><span>OREZA 01</li><li><img src="LBImages/oreza02.png" /><span>OREZA 02<span></li><li><img  src="LBImages/oreza03.png" /><span>OREZA 03<span></li><li><img  src="LBImages/ego01.png" /><span>EGO 01<span></li><li><img  src="LBImages/ego02.png" /><span>EGO 02<span></li>

@@ -5,16 +5,17 @@
     <meta name="description" content="" />
     <meta name="language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
+
     <title>ALPHA-ZERO (CONTACT)</title>
 	<link rel=icon href="favicon.png" type="image/png">
-	
-	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="thesaurus.css" type="text/css">
-	
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="thesaurus.css" type="text/css"> -->
+
 	<base target="_blank">
 	<script src="modernizr81475.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery-3.3.1.slim.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$(window).scroll(function(){ //Runs this function every time a scroll event is recognised
@@ -26,12 +27,12 @@
 				if ($(this).scrollTop() < 400) { // If this.scrollTop(distance from top) is less than 400, do this. This is for hiding and showing a down button.
 				}
 			});
-			
-			$('#scrollTopbtn').click(function () { //Animate the toTop button 
+
+			$('#scrollTopbtn').click(function () { //Animate the toTop button
 				$('body,html').animate({scrollTop: 0}, 600);
 				return false;
 			});
-			
+
 			$('a[href*=#]:not([href=#])').click(function() {
 				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 					var target = $(this.hash);
@@ -46,10 +47,153 @@
 			});
 		});
 	</script>
+    <style type="text/css">
+        body {
+        	margin: 0;
+        	padding: 0;
+        	width: 100%;
+        	height: 100%;
+
+            font-family: 'Roboto', sans-serif;
+        }
+        p, h1, h2, h3, h4, h5, h6 {}
+        a {text-decoration: none;}
+
+        body {background: url(images/backdrop.png) repeat center;}
+
+        div#container {
+            margin: 0 auto;
+        }
+        #cardSet {
+            display: block;
+            margin: -60px auto 0;
+            padding-top: 274px;
+            min-width: 510px; max-width: 902px; height: 740px;
+            background-image: url(images/contact-card-bg.png);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center top;
+            text-align: center;
+        }
+        #contactCard {
+            display: inline-block;
+            padding-top: 166px;
+            width: 510px; height: 146px;
+            background: url(images/contact-card.png) no-repeat;
+            text-align: center;
+
+            border-radius: 2px;
+            border: 1px solid rgba(51,0,51,.8);
+        	box-shadow: 0 8px 32px rgba(30,30,30,.2);
+        	transition: all .5s;
+        }
+        #contactCard:hover {
+        	box-shadow: 0 8px 32px rgba(30,30,30,.5);
+        }
+        #contactCard a {
+            display: block;
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            font-size: 24px;
+            text-transform: uppercase;
+            transition: all .4s;}
+        #contactCard a:hover {text-shadow: 0 0 8px rgba(255, 255, 255,.8);}
+
+        #description_block {
+            margin: 0 auto;
+            width: 510px;
+        }
+        #description_block #descrip {margin-top: 64px; text-align: justify;}
+
+        #taglist {margin: 0 0 32px; padding: 0; list-style: none; font-size: 12px;text-align: center; text-transform: uppercase;}
+        #taglist li {
+            display: inline-block;
+            margin: 2px;
+            padding: 3px;
+            background-color: rgba(80,80,80,.8);
+            border-radius: 3px;
+            color: white;
+        }
+        #taglist li.pl {background-color: rgba(64,170,170,.8); font-weight: 700;}
+        #taglist li.app {background-color: rgba(170,064,111,.8); font-weight: 700;}
+        a#showcaselnk {
+            display: block;
+            margin: 0 0 16px; padding: 3px;
+            background-color:  rgba(80,80,80,.5);
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            opacity: 0.75;
+        }
+        a#showcaselnk.inactive {}
+        a#showcaselnk:hover {opacity: 0.25;}
+        a#showcaselnk:active {opacity: 1;}
+
+        #ex-link { clear: both; display: block; columns: 2;}
+        #ex-link a {display: block; opacity: 0.75;}
+        #ex-link a:hover {opacity: 1}
+
+        #ex-link a.fbk {}
+        #ex-link a.gtb {}
+        #ex-link a.nst {}
+        #ex-link a.nst:before {content:"@"}
+        #ex-link a.tbr {}
+        #ex-link a.twt {}
+        #ex-link a.twt:before {content:"@"}
+    </style>
 </head>
 <body>
-	<section>
-		
-	</section>
+<div id="container">
+    <section id="cardSet">
+        <div id="contactCard">
+            <a href="http://alpha-zero.design">http://alpha-zero.design</a>
+            <a href="mailto:alpha-zero@live.com" style="margin-top: 4px; font-size: 32px">alpha-zero@live.com</a>
+        </div>
+        <div id="description_block">
+            <div id="descrip">
+                <ul id="taglist"><li class="pl">NZL</li><li>Illustration</li><li>Design</li><li>Street Art</li><li>Vector Work</li></ul>
+                <p>It's me, ALPHA-ZERO, a creator, with a large eye towards worldbuilding and eccentric illustration and design. <br />
+                I'm motivated by street art, minimalism, and clean, self-sustaining design.
+                I know my way around digital design, including animation practices and web-design with an itch that keeps me curious about learning anything about everything.</p>
+                <!-- <p>I'm ALPHA-ZERO, a creator with a focus on worldbuilding and illustration.
+                I'm inspired a lot by street art and clean, minimalistic, self-sunstaining design. I know standard animation and web design processes mostly knowing my way around programs like Photoshop and Illustrator.
+                <br>I love creating stories and universes, and I have a curious, eager-to-learn attitude that can be either good or bad (Situational).</p>
+                <p>*pats shoulders* I am here if you need to talk.</p> -->
+                <a href="" id="showcaselnk" class="inactive">Download Artwork showcase</a>
+            </div>
+            <div id="ex-link">
+                <a class="fbk" href="">azezaroo</a>
+                <a class="gtb" href="">alpha-zero</a>
+                <a class="nst" href="">automatic.spirit</a>
+                <a class="tbr" href="">azezaroo</a>
+                <a class="twt" href="">azezaroo</a>
+            </div>
+    </section>
+</div>
+<!-- <section id="contact">
+    <div id="contactCard">
+        <h1>ALPHA-ZERO</h1>
+        <span><a href="mailto:alpha-zero@live.com">alpha-zero<b></b>&#64;<b></b>live.com</a></span>
+        <a target="_blank" href="http://fb.com/azezaroo">fb.com/azezaroo</a>
+    </div>
+    <p class="contentDescription">
+        <span class="">🌏 NZL</span>I'm ALPHA-ZERO, a creator with a focus on worldbuilding and illustration.
+        I'm inspired a lot by street art and clean, minimalistic, self-sunstaining design. I know standard animation and web design processes mostly knowing my way around programs like Photoshop and Illustrator.
+        <br>I love creating stories and universes, and I have a curious, eager-to-learn attitude that can be either good or bad (Situational).
+        <br><br>*pats shoulders* I am here if you need to talk.
+    <a href="https://www.dropbox.com/s/kzcegwhdrvsh0s9/ALPHA-ZERO.Showcase.PRINT.pdf?dl=0" class="portfolioDL" title="Hosted on DropBox">Download Showcase of work</a></p>
+    <ul id="profileLinks">
+        <a target="_blank" href="http://www.behance.net/ALPHA-ZERO" class="behance">alpha-zero</a>
+        <a target="_blank" href="http://corrupted-azero.deviantart.com" class="deviantart">corrupted-azero</a>
+        <a target="_blank" href="http://www.designbyhumans.com/shop/ALPHAZERO/" class="designbyhumans">ALPHAZERO</a>
+        <a target="_blank" href="https://dribbble.com/alpha-zero" class="dribbble">ALPHA-ZERO</a>
+        <a target="_blank" href="http://fb.com/azezaroo" class="facebook">azezaroo</a>
+        <a target="_blank" href="https://github.com/alpha-zero" class="github">ALPHA-ZERO</a>
+        <a target="_blank" href="https://instagram.com/automatic.spirit" class="instagram">automatic.spirit</a>
+        <a target="_blank" href="http://byzero.tumblr.com" class="tumblr">byzero.tumblr</a>
+        <a target="_blank" href="http://www.twitter.com/azezaroo" class="twitter">@azezaroo</a>
+        <a target="_blank" href="https://webflow.com/ALPHAZERO" class="webflow">ALPHAZERO</a>
+    </ul>
+</section> -->
 </body>
-</html> 
+</html>
