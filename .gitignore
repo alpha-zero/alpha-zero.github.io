@@ -1,3 +1,8 @@
+# main ignoring files for production. not important for webhosting.
 *.psd
 *.ai
 *.db
+
+# ignore old files
+*.old.*
+_old

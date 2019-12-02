@@ -4,56 +4,162 @@
 /* IMPORTS	*** */
 
 /*Arimo*/
-@import url(https://fonts.googleapis.com/css?family=Arimo:400,700italic,400italic,700); 
 
 /* RESETS	*** */
 
 body {
-	margin: 0;
-	padding: 0;
+	margin: 0; padding: 0; width: 100%; height: 100%;
+	font-family: 'Roboto', sans-serif;
 }
+a {text-decoration: none;}
 
 /* FONTS 	*** */
 
 body {
-	font-family: "Arimo", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {}
-
 h1 {}
 
 /* BASE 	*** */
 
 body {
+	width: 100%; height: 100vh;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	backface-visibility: hidden;
+	animation: bgFade 60s linear infinite 0s;
+	animation-timing-function: ease-in-out;
+	background-image: url(images/splash1.png);
 }
 
-.ccontainer {
-	margin: 0; padding: 0;
-	border-left: 4px solid red;
-	border-right: 4px solid red;
-	min-height: 100vh;
+section{min-height: 100vh;}
+#splash {
+	position:relative;
+	/* background-color: rgba(250,250,250,1); */
 }
-
-.conblock {
+#splashContent {
+	position: absolute;
 	display: block;
-	margin: 0 auto;
+	width: 420px; height:420px;
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%) scale(.75);
+	transition: transform .75s;
+
+	background-image: url(splash.svg);
+	background-repeat: no-repeat;
+	background-position: top center;
+
+	/* background-color: rgba(250, 250, 250, 0.1);
+	border-radius: 420px; */
+}
+.objective {
+	position: relative;
+	display: block;
+	margin: 0;
+	width: 84px; height: 84px;
+	border-radius: 250px;
+	transition: ease-in all .05s;
+	box-shadow:none;
+
+	text-align: center;
+	background-image: url(spritesheet.svg);
+	background-repeat: no-repeat;
+	transform:scale(.714);
+	-webkit-filter: grayscale(1); filter: grayscale(1); opacity: 0.5;
+}
+.objective.active {
+	-webkit-filter: grayscale(.3);
+	filter: grayscale(.3);
+	opacity: 1;
+}
+.objective.active:hover, .objective.active:focus {
+	margin: 0;
+	outline: 0px solid transparent;
+	filter:grayscale(0);
+	transform:scale(1);
+	box-shadow: 0 0 20px 1px rgba(0,0,0,.4);
+	transition: ease-out all .2s;
+	z-index: 999;
+}
+.objective:active {
+	transform: scale(.8);
+	transition: all .2s;
+}
+.objective.nst { background-color: rgb(188,42,141) ;}
+.objective.twt { background-color: rgb(29,161,242) ; background-position: -84px 0;}
+.objective.gtb { background-color: rgb(142,36,205) ; background-position: -168px 0;}
+.objective.tch { background-color: rgb(100,65,165) ; background-position: 0px -84px;}
+.objective.gum { background-color: rgb(251,171,70) ; background-position: -84px -84px;}
+.objective.ars { background-color: rgb(19,175,240) ; background-position: -168px -84px}
+.objective {font-size: 0;}
+
+/* .active::before, .active::after {
+	display: block;
+	position:relative;
+	width: 150px; height: 128px;
+	transition: all .03s;
+	background:rgba(200,0,0,1);
+	opacity: 0;
+	visibility: hidden;
+}
+.active::before {
+	left:-90px; top: -50px;
+	content:"";
+}
+.active::after {
+	left: 25px; top:-200px;
+	content:"";
+}
+.active:hover::before,
+.active:focus::before {
+	transform: translateX(-16px); opacity:1;
+	transition: opacity 1s, transform .5s; visibility: visible;
+}
+.active:hover::after,
+.active:focus::after {
+	transform: translateX(16px); opacity:1;
+	transition: opacity 1s, transform .5s; visibility: visible;
+} */
+
+
+footer {
+		z-index: 99;
+		display: block;
+		width: 100vw;
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+}
+footer>div {max-width: 420px; margin: 0 auto 4px; text-align: center;}
+footer a {
+		display: inline-block;
+		padding: 4px 0px 18px; margin: 0 4px;
+		width: 120px;
+		text-transform: uppercase;
+		color: white;
+		transition: all .5s;
+		background-image: url(spritesheet.svg);
+		background-repeat: no-repeat;
+		background-position: -84px -168px;
+}
+footer a:hover, footer a:focus {transform:translateY(-20px); transition: all .2s;}
+
+@keyframes bgFade {
+	0% {background-image: url(images/splash1.png);}
+	9% {background-image: url(images/splash1.png);}
+	16% {background-image: url(images/splash2.png);}
+	34% {background-image: url(images/splash2.png);}
+	41% {background-image: url(images/splash3.png);}
+	59% {background-image: url(images/splash3.png);}
+	66% {background-image: url(images/splash4.png);}
+	84% {background-image: url(images/splash4.png);}
+	91% {background-image: url(images/splash1.png);}
 }
 
-a.returnbtn {
-	display: inline-block;
-	padding: 6px;
-	padding-left: 16px;
-	background: red;
-	
-	text-transform: uppercase;
-	color: white;
-	font-weight: 700;
-	text-decoration: none;
-	
-	transition: padding .4s ease-out;
+@media (min-width: 420px) {
+	#splashContent {
+		transform: translate(-50%, -50%) scale(1);
+	}
 }
-a.returnbtn:hover {padding-left:6px; transition: padding .1s ease-out;}
-
-/* RESIZING	*** */
-

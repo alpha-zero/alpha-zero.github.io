@@ -20,40 +20,38 @@ body {
 	height: 100%;
 
 	font-family: 'Roboto', sans-serif;
-	color: rgba(8,8,8,1);
 }
-
-a {text-decoration: none; color: rgba(8,8,8,1)}
+p, h1, h2, h3, h4, h5, h6 {}
+a {text-decoration: none;}
 a:hover {}
 a:visited {}
 
-section {
-	min-height: 100vh;
-}
-#projects {
-	background-color: rgba(232,232,232,1);
-	z-index: 99;
-}
+section {}
 
-#scrollTopbtn {
-	display: block;
-	bottom: -64px; right: 32px;
-	width: 64px; height: 64px;
-	position: fixed;
-	background: rgba(40,180,120,1);
-	font-size: 32px;
-	line-height: 60px;
-	text-align: center;
-
-	border-radius: 32px;
-	box-shadow: 0 4px 16px 0 rgba(32,32,32,.67);
-	color: white;
-
-	transition: all .1s;
-	z-index:99;
+nav { /* Navigation and #goHome button */
+		position: fixed;
+		top: 0;
+		display: block;
+		margin-top: 16px;
+		width: 100%; height: 64px;
+		z-index: 20;
 }
-#scrollTopbtn:hover {background: rgba(48,206,130,1)}
-#scrollTopbtn:active {box-shadow: 0 0 12px 0 rgba(32,32,32,.67)}
+#gohome {
+		margin-left: 16px;
+		display: block;
+		width: 78px; height: 64px;
+
+		font-size: 0;
+		text-align: center;
+		background-image: url(spritesheet.png);
+		background-repeat: no-repeat;
+		background-position: 0 -168px;
+		transition: margin-left 1s;
+}
+#gohome:hover, #gohome:focus{
+		margin-left: 32px;
+		transition: margin-left .5s;
+}
 
 	/**** ************** ****/	/**** ************** ****/
 	/**** SPLASH SECTION ****/	/**** SPLASH SECTION ****/
@@ -62,69 +60,6 @@ section {
 	/**** ***************** ****/	/**** ***************** ****/
 	/**** PORTFOLIO SECTION ****/	/**** PORTFOLIO SECTION ****/
 	/**** ***************** ****/	/**** ***************** ****/
-
-#projectsContent {
-	display: block;
-	height: 100%;
-	padding: 32px 63px;
-	overflow:hidden;
-	/*background: rgba(210,80,0,.1);*/
-}
-.openingParagraph {
-	margin-top: -42px;
-	padding-bottom: 16px;
-	color: white;
-	font-size: 32px;
-	font-weight: 700;
-	text-align: center;
-	text-transform:uppercase;
-}
-ul#productList{padding: 0; list-style-type: none; text-align: center;}
-li.product {
-	position:relative;
-	display: inline-block;
-	margin: 0px; padding: 0;
-	height: 300px; width: 300px;
-	overflow: hidden;
-	box-shadow: 0 4px 16px rgba(64,64,64,.33);
-
-	color: white;
-	font-size:14px;
-	text-align:justify;
-
-	background-image:;
-	background-color: rgba(255,255,255,1);
-	background-position: center top;
-}
-.projectDescription {
-	position:absolute;
-	display: block;
-	clear: both;
-	padding: 308px 8px 8px;
-	height:284px;  width: 284px;
-	transition: all .4s;
-	opacity:0;
-	z-index:10;
-}
-.projectDescription:hover {
-	padding-top: 8px;
-	background-color: rgba(32,32,32,.7);
-	opacity:1;}
-.projectTitle {display:block;font-size:16px;font-weight:700;}
-.projectLink {
-	display: inline-block; float: left;
-	padding-left: 24px; margin-right: 8px;
-	height: 24px;
-	background: url(iconschool.png) top left no-repeat;
-	background-position: 0 -184px;
-	font-size:12px; text-transform: uppercase;
-	text-decoration: underline; line-height:24px;
-}
-.projectDescription .description { clear: both;}
-.projectDescription a {color: white;}
-.projectDescription a:hover {color: rgba(244, 19, 113,1);}
-.projectDescription .inactive {opacity:.5}
-.projectDescription .inactive:hover {color: white;}
 
 	/**** *************** ****/	/**** *************** ****/
 	/**** CONTACT SECTION ****/	/**** CONTACT SECTION ****/
