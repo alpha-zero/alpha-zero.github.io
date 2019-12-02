@@ -162,35 +162,35 @@
         a#showcaselnk:hover, a#showcaselnk:focus {opacity: 0.25;}
         a#showcaselnk:active {opacity: 1;}
 
-        #ex-link { clear: both; display: block; columns: 2;}
+        #ex-link { display: flex; flex-wrap: wrap; margin-bottom: 16px;}
         #ex-link a {
           display: block;
           padding: 4px;
           color: #ed1f25;
-          border-radius: 8px;
-          border: 1px solid #fff;
-          page-break-inside: avoid;
-          break-inside: avoid;
           transition: all 1.2s;
           z-index: 10;
+          flex: 1 0 45%;
         }
-        #ex-link a:nth-child(n+2) {margin-top:4px;}
         #ex-link a:hover, #ex-link a:focus {
-          background: #fff;
-          transform: translateY(-8px);
-          filter:drop-shadow(0px 12px 5px rgba(50,50,50,.2));
-          transition-timing-function: ease-in;
+          color: white;
+          background-color: #ed1f25;
           transition: all .25s;
         }
 
-        #ex-link a.gtb::after, #ex-link a.twt::after, #ex-link a.nst::after,
-        #ex-link a.gum::after, #ex-link a.tch::after, #ex-link a.ars::after{
+        #ex-link a::after{
           border-top: 1px solid rgba(0,0,0,.1);
           display: block;
           font-family: 'Raleway', sans-serif; font-style:italic;
           font-size: .7em;
           color: grey;
+          transition: all 1.2s;
         }
+        #ex-link a:hover::after {
+          border-top-color: #dfe77d4d;
+          color: #dfe77d;
+          transition: all .25s;
+        }
+
         #ex-link a.gtb {} #ex-link a.gtb::after {content:"GitHub"}
         #ex-link a.twt {} #ex-link a.twt::before {content:"@"} #ex-link a.twt::after {content:"Twitter"}
         #ex-link a.nst {} #ex-link a.nst::before {content:"@"} #ex-link a.nst::after {content:"Instagram"}
@@ -200,13 +200,20 @@
 
         span.moniker {
           display: inline-block; text-align: center;
+          transition: transform .5s, color .5s; color: #000;
         }
         span.moniker::before {
           display: block;
-          margin-top: -.75em;
-          font-size: .75em;
+          margin-top: -1em;
           content:"automatic-spirit";
+          color: #0000001a;
+          transition: color .5s;
         }
+        span.moniker:hover  {
+          transform: translateY(1.2em);
+          color: #0000001a;
+        }
+        span.moniker:hover::before { color: #000; }
 
         body::-webkit-scrollbar {width: 1em;}
         body::-webkit-scrollbar-track {
@@ -234,18 +241,22 @@
         <div id="description_block">
             <div id="descrip">
                 <ul id="taglist"><li class="pl">NZL</li><li>Illustration</li><li>Design</li><li>Street Art</li><li>Vector Work</li></ul>
-                <p><span class="moniker">ALPHA-ZERO</span> is an illustrator with a foot towards vector-based art as well as a very personal, street-art style.<br />
-                He's motivated by street art, minimalistic and clean design with a philosophy towards a self-sustaining work process.
-                He has some proficiency and experience in digital and front-end design as well as in animation practices while also having some kind of need to cheer on others' wellbeing.</p>
+                <p>
+                  We're all trying to move forward and survive, as a species and as something that exists in the world.<br>
+                  And contrary to popular belief, <span class="moniker">ALPHA-ZERO</span> is no different.<br>
+                  They're a creative; an illustrator, a fan of collaboration, being wholesome and having people to cheer on in general.<br>
+                  <span class="moniker">ALPHA-ZERO</span> likes street art and modern design, working with vector, and has a proficiency & fluency in digital design,
+                  with some kind of fidgeting good nature of learning and googling things they don't understand.
+                </p>
                 <hr />
             </div>
             <div id="ex-link">
-                <a class="gtb" href="https://github.com/alpha-zero" title="Github">alpha-zero</a>
-                <a class="twt" href="https://twitter.com/azezaroo" title="Twitter">azezaroo</a>
-                <a class="nst" href="https://www.instagram.com/automatic.spirit" title="Instagram">automatic.spirit</a>
-                <a class="gum" href="https://gumroad.com/azezaroo" title="Gumroad (Digital shop)">azezaroo</a>
-                <a class="tch" href="https://twitter.com/azezaroo" title="Twitch (Livestreams)">azezaroo</a>
-                <a class="ars" href="https://www.artstation.com/alpha-zero" title="Artstation (Portfolio & Processes)">azezaroo</a>
+              <a class="gtb" href="https://github.com/alpha-zero" title="Github">alpha-zero</a>
+              <a class="twt" href="https://twitter.com/azezaroo" title="Twitter">azezaroo</a>
+              <a class="nst" href="https://www.instagram.com/automatic.spirit" title="Instagram">automatic.spirit</a>
+              <a class="gum" href="https://gumroad.com/azezaroo" title="Gumroad (Digital shop)">azezaroo</a>
+              <a class="tch" href="https://twitter.com/azezaroo" title="Twitch (Livestreams)">azezaroo</a>
+              <a class="ars" href="https://www.artstation.com/alpha-zero" title="Artstation (Portfolio & Processes)">azezaroo</a>
             </div>
         </div>
     </section>

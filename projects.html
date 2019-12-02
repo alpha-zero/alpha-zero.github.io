@@ -62,8 +62,11 @@
       header>*:nth-child(n+3) {
         flex-grow:100;
       }
-      header>a{ transition: all .6s;}
-      header>a:hover{background-color: var(--accentcolor); transition: all .1s; transform: translateX(-8px)}
+      header>a{ transition: all .6s; box-shadow: 0px 0 var(--primarycolor); }
+      header>a:hover, header>a:focus {
+        background-color: var(--accentcolor); transition: all .1s; transform: translateX(-8px);
+        box-shadow: 8px 0 var(--accentcolor);
+      }
 
       div#container {
           margin: 0 auto;
