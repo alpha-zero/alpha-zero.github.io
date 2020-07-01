@@ -14,7 +14,7 @@
     <title>ALPHA-ZERO (CONTACT)</title>
 	<link rel=icon href="favicon.png" type="image/png">
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<!-- <link rel="stylesheet" href="glam.css" type="text/css"> -->
   <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
@@ -56,211 +56,205 @@
 		});
 	</script>
     <style type="text/css">
-        body {
-        	margin: 0;
-        	padding: 0;
-        	width: 100%;
-        	height: 100%;
+      /* reset */
+      body, p, h1, h2, h3, h4, h5 h6 { padding: 0; margin: 0;}
 
-            font-family: 'Roboto', sans-serif;
-        }
-        p, h1, h2, h3, h4, h5, h6 {}
-        a {text-decoration: none;}
+      :root {
+        --text-color: black;
+        --primary-color: ;
+        --secondary-color: ;
+        --accent-color: ;
+        --bg-color: #dadada;
+      }
 
-        body {background: url(images/backdrop.png) repeat center;}
+      html {}
+      body {min-height: 100vh;}
+      p, h1, h2 ,h3 ,h4 ,h5, h6 {}
+      a, a:visited {color: var(--text-color); text-decoration: none;}
 
-        nav {
-            position: fixed;
-            top: 0;
-            display: block;
-            margin-top: 16px;
-            width: 100%; height: 64px;
-            z-index: 20;
-        }
-        #gohome {
-            margin-left: 16px;
-            display: block;
-            width: 78px; height: 64px;
+      body {
+        font-family: 'Merriweather', serif;
+        background-image: url('images/bdrop.png');
+        background-position: top center;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+      }
+      p {text-align: justify;}
 
-            font-size: 0;
-            text-align: center;
-            background-image: url(spritesheet.png);
-            background-repeat: no-repeat;
-            background-position: 0 -168px;
-            transition: all 1s;
-        }
-        #gohome:hover, #gohome:focus{
-            margin-left: 32px;
-            transition: all .5s;
-        }
+      header, section:not(#contact), footer { margin: 10px; display: block;}
 
-        div#container {
-            margin: 0 auto;
-        }
-        #cardSet {
-            display: block;
-            margin: -60px auto 0;
-            padding-top: 274px;
-            min-width: 510px; max-width: 902px; height: 740px;
-            background-image: url(images/contact-card-bg.png);
-            background-repeat: no-repeat;
-            background-size: auto;
-            background-position: center top;
-            text-align: center;
-        }
-        #contactCard {
-            display: inline-block;
-            padding-top: 166px;
-            width: 510px; height: 146px;
-            background: url(images/contact-card.png) no-repeat;
-            text-align: center;
+      header {}
+      section {}
+      footer {}
 
-            border-radius: 2px;
-            border: 1px solid rgba(51,0,51,.2);
-        	box-shadow: 0 8px 32px rgba(30,30,30,.2);
-        	transition: all .5s;
-        }
-        #contactCard:hover {
-        	box-shadow: 0 8px 32px rgba(30,30,30,.5);
-        }
-        #contactCard a {
-            display: block;
-            font-family: 'Raleway', sans-serif;
-            color: white;
-            font-size: 24px;
-            text-transform: uppercase;
-            transition: all .4s;}
-        #contactCard a:hover {text-shadow: 0 0 8px rgba(255, 255, 255,.8);}
+      nav {
+        margin: 10px;
+        display: flex;
+        font-size: .8em;
+      }
 
-        #description_block {
-            margin: 0 auto;
-            width: 510px;
-        }
-        #description_block #descrip {margin-top: 64px; text-align: justify;}
+      nav>a:visited {color: var(--text-color);}
+      nav>a {
+        display: inline-block;
+        padding: 5px 10px; margin: -5px 5px -5px -10px;
+        border-radius: 0 30px 30px 0;
+        transition: all .2s;
+      }
+      nav>a:hover {background-color: var(--text-color); color: var(--bg-color);}
+      nav>hr {
+        border: none; flex-grow: 3;
+        border-top: 3px double var(--primary-color);
+      }
 
-        #taglist {margin: 0 0 32px; padding: 0; list-style: none; font-size: 12px;text-align: center; text-transform: uppercase;}
-        #taglist li {
-            display: inline-block;
-            margin: 2px;
-            padding: 3px;
-            background-color: rgba(80,80,80,.8);
-            border-radius: 3px;
-            color: white;
-        }
-        #taglist li.pl {background-color: rgba(64,170,170,.8); font-weight: 700;}
-        #taglist li.app {background-color: rgba(170,064,111,.8); font-weight: 700;}
-        a#showcaselnk {
-            display: block;
-            margin: 0 0 16px; padding: 3px;
-            background-color:  rgba(80,80,80,.5);
-            color: white;
-            text-align: center;
-            text-transform: uppercase;
-            opacity: 0.75;
-        }
-        a#showcaselnk.inactive {}
-        a#showcaselnk:hover, a#showcaselnk:focus {opacity: 0.25;}
-        a#showcaselnk:active {opacity: 1;}
+      section#descriptive {}
+      #descriptive p {
+        margin-bottom: 15px;
+      }
 
-        #ex-link { display: flex; flex-wrap: wrap; margin-bottom: 16px;}
-        #ex-link a {
-          display: block;
-          padding: 4px;
-          color: #ed1f25;
-          transition: all 1.2s;
-          z-index: 10;
-          flex: 1 0 45%;
-        }
-        #ex-link a:hover, #ex-link a:focus {
-          color: white;
-          background-color: #ed1f25;
-          transition: all .25s;
-        }
+      section#links-out {
+        padding-top: 24px; margin-top: 50px;
+        display: flex;
+        justify-content: center;
+      }
 
-        #ex-link a::after{
-          border-top: 1px solid rgba(0,0,0,.1);
-          display: block;
-          font-family: 'Raleway', sans-serif; font-style:italic;
-          font-size: .7em;
-          color: grey;
-          transition: all 1.2s;
-        }
-        #ex-link a:hover::after {
-          border-top-color: #dfe77d4d;
-          color: #dfe77d;
-          transition: all .25s;
+      #links-out>a{
+        opacity: .8;
+        margin: 5px;
+        width: 30px; height: 30px;
+        background-size: 60px;
+        background-image: url(images/prj-sprite.png);
+        border-radius: 30px;
+        transition: all 1s;
+      }
+      .arts {}
+      .inst { background-position: 0px -120px; }
+      .gith { background-position: -30px 0px; }
+      .payh { background-position: -30px -60px; }
+      .twch { background-position: -30px -120px; }
+      .twtt { background-position: 0 -60px; }
+      #links-out>a:hover {
+        opacity: 1;
+        transform: translateY(-5px);
+        background-color: #ffffffab;
+        box-shadow: 0 5px 15px #00000075;
+        transition: all .1s;
+      }
+
+      section#contact {
+        padding: 275px 0 100px ; margin: -250px 0 -50px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center top;
+        text-align: center;
+        /* background-color: #f443361a; */
+        /* background-size: 75%; */
+      }
+
+      #contactCard {
+        display: inline-block;
+        padding-top: 166px;
+        width: 510px; height: 146px;
+        background: url(images/contact-card.png) no-repeat;
+        text-align: center;
+
+        border-radius: 2px;
+        box-shadow: 0 8px 32px rgba(30,30,30,.2);
+        transition: all .5s;
+      }
+      #contactCard:hover {
+        box-shadow: 0 8px 32px rgba(30,30,30,.5);
+      }
+      #contactCard a {
+        display: block;
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        font-size: 24px;
+        text-transform: uppercase;
+        transition: all .4s;}
+      #contactCard a:hover {text-shadow: 0 0 8px rgba(255, 255, 255,.8);}
+
+      footer { padding-bottom: 25px; margin-bottom: 25px; border-bottom: solid 1px var(--primary-color);}
+      footer>a { margin-bottom: 5px; font-style: italic; text-decoration: underline;}
+      footer>a:hover { background-color: var(--text-color); color: var(--bg-color); }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+            --text-color: #212020;
+            --primary-color: #212020;
+            --secondary-color: ;
+            --accent-color: ;
+            --bg-color: #fff0d3;
         }
 
-        #ex-link a.gtb {} #ex-link a.gtb::after {content:"GitHub"}
-        #ex-link a.twt {} #ex-link a.twt::before {content:"@"} #ex-link a.twt::after {content:"Twitter"}
-        #ex-link a.nst {} #ex-link a.nst::before {content:"@"} #ex-link a.nst::after {content:"Instagram"}
-        #ex-link a.gum {} #ex-link a.gum::after {content:"Gumroad"}
-        #ex-link a.tch {} #ex-link a.tch::after {content:"Twitch"}
-        #ex-link a.ars {} #ex-link a.ars::after {content:"ArtStation"}
+        .dialogue p {
+          box-shadow: 0 2px 8px 1px rgba(0, 0, 0, .34); ;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text-color: #f5f3f0;
+          --primary-color: #f5f3f0;
+          --secondary-color: #29292e;
+          --accent-color: #29292e;
+          --bg-color: #4c4b44;
+        }
+        #links-out>a {filter:invert(1);}
+      }
 
-        span.moniker {
-          display: inline-block; text-align: center;
-          transition: transform .5s, color .5s; color: #000;
-        }
-        span.moniker::before {
-          display: block;
-          margin-top: -1em;
-          content:"automatic-spirit";
-          color: #0000001a;
-          transition: color .5s;
-        }
-        span.moniker:hover  {
-          transform: translateY(1.2em);
-          color: #0000001a;
-        }
-        span.moniker:hover::before { color: #000; }
+      @media ( min-width: 420px ) {
+      }
 
-        body::-webkit-scrollbar {width: 1em;}
-        body::-webkit-scrollbar-track {
-          /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+      @media ( min-width: 560px ) {
+        section#contact {
+          background-image: url(images/contact-card-bg.png);
         }
-        body::-webkit-scrollbar-thumb {
-          background-color: #777;
-          border-radius: 32px;
-          border: .34em solid white;
-        }
-        body::-webkit-scrollbar-thumb:hover {background-color: #ed1f25;}
+      }
+
+      @media ( min-width: 800px ) {
+      }
+
     </style>
 </head>
 <body>
-    <nav>
-        <a id="gohome" class="shake" title="Return to splash" href="index.html" target="_self">Back</a>
-    </nav>
-    <div id="container">
-    <section id="cardSet">
-        <div id="contactCard" data-tilt data-tilt-max="10" data-tilt-scale="1.02">
-            <!-- This is my actual business/contact card :smirk: -->
-            <a href="http://alpha-zero.design" title="You are here !">http://alpha-zero.design</a>
-            <a href="mailto:alpha-zero@live.com" style="margin-top: 4px; font-size: 32px" title="Contact address">alpha-zero@live.com</a>
-        </div>
-        <div id="description_block">
-            <div id="descrip">
-                <ul id="taglist"><li class="pl">NZL</li><li>Illustration</li><li>Design</li><li>Street Art</li><li>Vector Work</li></ul>
-                <p>
-                  We're all trying to move forward and survive, as a species and as something that exists in the world.<br>
-                  And contrary to popular belief, <span class="moniker">ALPHA-ZERO</span> is no different.<br>
-                  They're a creative; an illustrator, a fan of collaboration, being wholesome and having people to cheer on in general.<br>
-                  <span class="moniker">ALPHA-ZERO</span> likes street art and modern design, working with vector, and has a proficiency & fluency in digital design,
-                  with some kind of fidgeting good nature of learning and googling things they don't understand.
-                </p>
-                <hr />
-            </div>
-            <div id="ex-link">
-              <a class="gtb" href="https://github.com/alpha-zero" title="Github">alpha-zero</a>
-              <a class="twt" href="https://twitter.com/azezaroo" title="Twitter">azezaroo</a>
-              <a class="nst" href="https://www.instagram.com/automatic.spirit" title="Instagram">automatic.spirit</a>
-              <a class="gum" href="https://gumroad.com/azezaroo" title="Gumroad (Digital shop)">azezaroo</a>
-              <a class="tch" href="https://twitter.com/azezaroo" title="Twitch (Livestreams)">azezaroo</a>
-              <a class="ars" href="https://www.artstation.com/alpha-zero" title="Artstation (Portfolio & Processes)">azezaroo</a>
-            </div>
-        </div>
-    </section>
+  <nav>
+    <a href="" title="Return to Splash page" target="_self">RTN</a>
+    <hr>
+  </nav>
+  <header>
+  </header>
+  <section id="descriptive">
+    <p>
+      Upon exiting the cavern, you come face to face with a hideous creature standing on its 2 legs, that has 2 other limbs on the sides of its body - Several other tinier limbs protrude from them.<br>
+      It appears covered in dried flesh and even more protected by articles of fabric which appears to keep it warm.
+    </p>
+    <p>"I'm <i>ALPHA-ZERO</i>" it announces, the sound vibrating out of a wet exposed orifice on the large furry bulb that extends out from the top of its soggy torso.</p>
+    <p>"Or perhaps, also <i>automatic-spirit</i>."</p>
+    <p>
+      "I'm a freelance <span>illustrator</span> and digital designer, and I like to draw things. I also dabble in front-end web design and write silly things."<br>
+      You gag in disgust at the sight and the sounds emitting from the strange being.<br>
+      <i>How could something so small and innocent come out of a place called New Zealand?</i>
+    </p>
+    <p>One of its thin squishy limbs extends and it hands you a hard rectangular sheet of parchment. It reads:</p>
+  </section>
+  <section id="links-out"> <!-- laces out -->
+    <a class="arts" href="" title="ArtStation"></a>
+    <a class="inst" href="" title="Instagram"></a>
+    <a class="gith" href="" title="Github"></a>
+    <a class="payh" href="" title="Payhip (Digital Store)"></a>
+    <a class="twch" href="" title="Twitch (Livestreaming)"></a>
+    <a class="twtt" href="" title="Twitter"></a>
+  </section>
+  <section id="contact">
+    <div id="contactCard" data-tilt data-tilt-max="10" data-tilt-scale="1.02">
+        <!-- This is my actual business/contact card :smirk: -->
+        <a href="http://alpha-zero.design" title="You are here !">http://alpha-zero.design</a>
+        <a href="mailto:alpha-zero@live.com" style="margin-top: 4px; font-size: 32px" title="Contact address">alpha-zero@live.com</a>
     </div>
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
+  </section>
+  <footer>
+    <a target="_self" href="javascript:history.go(-1)" title="Return to whence you came.">If you wish to retreat from this creature and call it a day, turn to page 1.</a><br>
+    <a target="_self" href="" title="Onwards, to the project page !">You decide to ask them about their current projects. Turn to page 112.</a>
+  </footer>
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
 </html>

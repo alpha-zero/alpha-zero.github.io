@@ -11,35 +11,34 @@
     <title>PROJECTS | ALPHA-ZERO (ILLLUSTRATION AND DESIGN)</title>
     <link rel=icon href="favicon.png" type="image/png">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|PT+Sans:400,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Lato:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="glam.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style type="text/css">
       :root {
-        --primarycolor: #161616;
-        --primaryNoFade: #3e3e3a;
-        --secondarycolor: #dfbd60;
-        --tertiarycolor: #ccdf60;
-        --accentcolor: #d75353;
-        --bgcolor: #dcdcc8;
-        --fontcolor: #161616;
       }
+
+      * { cursor: url('prj-c.png') 16 16, auto;}
+      a { cursor: url('prj-c.png') 16 16, auto}
+
       body {
-        background-color: var(--bgcolor);
-        font-family: 'Montserrat', sans-serif;
-        color: var(--fontcolor);
+        background-color: var(--bg-color);
+        font-family: 'Dosis', sans-serif;
+        color: var(--font-color);
 
         background-image: url(images/prj-bg.png); /* bg is 50% grey pattern 30% opacity */
         background-position: center center;
       }
+
+      h1 {font-family: 'Lato', sans-serif;}
 
       header {
         margin-top: 4px;
         display: flex;
         font-size: 2em;
         font-weight: bold;
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'Lato', sans-serif;
         text-transform: uppercase;
         flex-wrap: nowrap;
         opacity: .8;
@@ -47,14 +46,14 @@
       header>div {
       }
       header>*:nth-child(odd) {
-        margin: 9px 0;
-        background-color: var(--primarycolor);
+        margin: 6px 0;
+        background-color: var(--primary-color);
       }
       header>*:first-child {
         margin-right: 8px; padding: 0 8px;
         font-size: .5em;
         font-weight: 400;
-        color: var(--bgcolor);
+        color: var(--bg-color);
       }
       header>*:nth-child(2) {
         margin-right: 8px;
@@ -62,10 +61,10 @@
       header>*:nth-child(n+3) {
         flex-grow:100;
       }
-      header>a{ transition: all .6s; box-shadow: 0px 0 var(--primarycolor); }
+      header>a{ transition: all .6s; box-shadow: 0px 0 var(--primary-color); }
       header>a:hover, header>a:focus {
-        background-color: var(--accentcolor); transition: all .1s; transform: translateX(-8px);
-        box-shadow: 8px 0 var(--accentcolor);
+        background-color: var(--accent-color); transition: all .1s; transform: translateX(-8px);
+        box-shadow: 8px 0 var(--accent-color);
       }
 
       div#container {
@@ -79,9 +78,11 @@
         display: block;
         opacity: .4;
         margin: 5px;
-        width: 200px; height: 260px;
+        width: calc(100% - 10px);
+        /* width: 200px;  */
+        height: 260px;
         background-color: #16161620;
-        transition: all 1s;
+        transition: opacity 1s, transform 1s, box-shadow 1s;
 
         position: relative;
         overflow: hidden;
@@ -90,8 +91,8 @@
       }
       #prj-list>.item:hover, #projects>.item:focus {
         opacity: 1;
-        transform: translate(-4px, -4px);
-        box-shadow: 4px 4px 0 #16161640;
+        transform: translate(0, -4px);
+        box-shadow: 0px 4px 0 #16161640;
         transition: all .1s;
       }
 
@@ -99,9 +100,10 @@
         display: block;
         margin: 0; padding: .2em .2em;
         font-size: 1.1em;
-        background-color: var(--primaryNoFade);
-        color: var(--bgcolor);
+        background-color: var(--primary-nofade);
+        color: var(--tertiary-color);
         font-weight: normal;
+        text-transform: uppercase;
         transform: translateY(-2em);
         transition: transform .25s;
       }
@@ -112,9 +114,9 @@
         top: 1.7em; left: 0;
         opacity: 0;
         transition: .34s;
-        color: white;
-        text-shadow: 0 0 4px var(--primarycolor);
+        color: var(--tertiary-color);
       }
+      .item-desc>p {margin: 0; background-color: var(--primary-nofade); display: unset;}
       .item > .item-links {
         display: flex;
         position: absolute;
@@ -127,8 +129,8 @@
           flex-grow: 1;
           padding: .2em 0;
           text-align: center;
-          color: var(--bgcolor);
-          background-color: var(--primaryNoFade);
+          color: var(--bg-color);
+          background-color: var(--primary-nofade);
           text-decoration: none;
       }
 
@@ -136,7 +138,7 @@
       div.item:hover .item-desc {opacity: 1;}
       div.item:hover .item-links {transform: translateY(0);}
        .item-links>a, .item-links>a:visited { }
-       .item-links>a:hover {color:var(--fontcolor); background-color: var(--secondarycolor);}
+       .item-links>a:hover {color:var(--font-color); background-color: var(--secondary-color);}
        .item-links>a.inactive {opacity: .5 ; -webkit-filter:grayscale(100%); text-decoration: line-through; cursor: default;}
 
       .ext-links-sprite {
@@ -147,32 +149,39 @@
       .ext-links-sprite>a {
         display: block;
         width: 30px; height: 30px;
-        background-size: 30px;
+        background-size: 60px;
         background-image: url(images/prj-sprite.png);
         opacity: 1;
         transition: background-position .2s;
 
-        border-left-color: var(--primarycolor);
+        border-left-color: var(--primary-color);
         border-left-style: solid;
         border-left-width: 1px;
       }
       .ext-links-sprite>a:last-child {
-        border-right-color: var(--primarycolor);
+        border-right-color: var(--primary-color);
         border-right-style: solid;
         border-right-width: 1px;}
       .ext-links-sprite>a:hover {}
       .arts:hover {background-position:0 -30px;}
       .twit {background-position: 0px -60px;}
       .twit:hover {background-position: 0px -90px;}
+      .insta {background-position: 0px -120px;}
+      .insta:hover {background-position: 0px -150px;}
 
       footer {
-        border-top: solid 1px var(--primarycolor);
-        padding-top: 8px; padding-bottom: 8px;
+        border-top: solid 1px var(--primary-color);
+        padding: 8px 0 8px;
         opacity: .8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
-      footer>span {font-size: .5em; display: inline-block; float: right;}
-      footer a, footer a:visited { display: inline-block; color: var(--fontcolor)}
-      footer a:hover {background-color: var(--primarycolor); color: var(--bgcolor)}
+      footer div {text-align: center;}
+      footer div.note {font-size: .5em; }
+      footer div.links {}
+      footer a, footer a:visited { display: inline-block; color: var(--font-color)}
+      footer a:hover {background-color: var(--primary-color); color: var(--bg-color)}
 
       body::-webkit-scrollbar {
         width: 1em;
@@ -183,16 +192,56 @@
       }
 
       body::-webkit-scrollbar-thumb {
-        background-color: var(--primaryNoFade);
+        background-color: var(--primary-nofade);
         outline: 1px solid slategrey;
       }
       body::-webkit-scrollbar-thumb:hover {
-        background-color: var(--primarycolor);
+        background-color: var(--primary-color);
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --font-color: #161616;
+          --primary-color: #161616;
+          --primary-nofade: #3e3e3a;
+          --secondary-color: #dfbd60;
+          --tertiary-color: #dcdcc8;
+          --accent-color: #d75353;
+          --bg-color: #dcdcc8;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --font-color: #dcdcc8;
+          --primary-color: #dcdcc8;
+          --primary-nofade: #dcdcc8;
+          --secondary-color: #dfbd60;
+          --tertiary-color: #3e3e3a;
+          --accent-color: #d75353;
+          --bg-color: #3e3e3a;
+        }
+        * { cursor: url('prj-c-i.png') 16 16, auto;}
+        .ext-links-sprite>a { background-image: url('images/prj-sprite-invert.png');}
+      }
+
+      @media ( min-width: 420px ) {
+        #prj-list>.item {
+          width: calc(50% - 10px);
+        }
+        #prj-list>.item:hover, #projects>.item:focus {
+          transform: translate(-4px, -4px);
+          box-shadow: 4px 4px 0 #16161640;
+        }
       }
 
       @media only screen
       and ( min-width:620px ) {
-        #prj-list { justify-content: left; }
+          #prj-list { justify-content: left; }
+          #prj-list>.item {
+            width: calc(33.33% - 10px);
+          }
+          footer { flex-direction: row; justify-content: space-between;}
+          footer div.note {order: 99;}
         }
     </style>
 
@@ -211,7 +260,9 @@
       <div id="prj-list">
         <div class="item" style="background-image: url('images/prj-thumb/product-citywitch.png');">
           <h1 class="item-title">CITYWITCH</h1>
-          <div class="item-desc">8 Witches used to be enough for the world. But times change.</div>
+          <div class="item-desc">
+            <p>8 Witches used to be enough for the world. But times change.</p>
+          </div>
           <div class="item-links">
             <a class="inactive">Comic</a>
             <a class="inactive">Articles</a>
@@ -219,7 +270,9 @@
         </div>
         <div class="item" style="background-image: url('images/prj-thumb/product-kirush3030x.png');">
           <h1 class="item-title">Ki-Rush</h1>
-          <div class="item-desc">After your recent exceptional performance, you have been invited to race in the Ki-Rush GP.</div>
+          <div class="item-desc">
+            <p>After your recent exceptional performance, you have been invited to race in the Ki-Rush GP.</p>
+          </div>
           <div class="item-links">
             <a href="">3030X</a>
             <a href="" class="inactive">Database</a>
@@ -227,14 +280,18 @@
         </div>
         <div class="item" style="background-image: url('images/prj-thumb/product-logobase.jpg');">
           <h1 class="item-title">Logobase database</h1>
-          <div class="item-desc">A library of logos found among all my projects.</div>
+          <div class="item-desc">
+            <p>A library of logos found among all my projects.</p>
+          </div>
           <div class="item-links">
             <a href="logobase.html">Visit</a>
           </div>
         </div>
         <div class="item" style="background-image: url('images/prj-thumb/product-catsup.png');">
           <h1 class="item-title">Catsup on Top</h1>
-          <div class="item-desc">This is my tomato-cat Catsup. And here is where I document Catsup's adventures.</div>
+          <div class="item-desc">
+            <p>This is my tomato-cat Catsup. And here is where I document Catsup's adventures.</p>
+          </div>
           <div class="item-links">
             <a href="">Comic</a>
             <a href="http://www.alpha-zero.design/catchcatsup/" title="">Database</a>
@@ -245,12 +302,15 @@
       <div class="ext-links-sprite">
         <a class="arts" href="https://www.artstation.com/alpha-zero" title="Nagivate to ArtStation_"></a>
         <a class="twit" href="https://twitter.com/azezaroo" title="Move to Twitter_"></a>
+        <a class="insta" href="https://instagram.com/automatic.spirit" title="Proceed to Instagram_"></a>
       </div>
       </section>
     </div>
     <footer>
-      <a href="index.html">Homepage</a> | <a href="contact.html">Contact</a>
-      <span>This page was made with desktop in mind. &#9789; ALPHA-ZERO / AUTOMATIC-SPIRIT</span>
+      <div class="note">&#9789; ALPHA-ZERO / AUTOMATIC-SPIRIT</div>
+      <div class="links">
+        <a href="index.html">Homepage</a> | <a href="contact.html">Contact</a>
+      </div>
     </footer>
   </div>
 

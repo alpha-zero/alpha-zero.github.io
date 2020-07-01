@@ -2,6 +2,8 @@
 *.psd
 *.ai
 *.db
+# other marked files
+*.private.*
 
 # ignore old files
 *.old.*
