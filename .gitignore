@@ -4,6 +4,7 @@
 *.db
 # other marked files
 *.private.*
+*.afphoto
 
 # ignore old files
 *.old.*
