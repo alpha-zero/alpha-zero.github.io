@@ -72,7 +72,7 @@
           max-width: 620px;
       }
       section#projects {margin-bottom: 16px;}
-      #projects>p {text-align:justify; opacity: .8;}
+      #projects>p { display: block; text-align:justify; opacity: .8;}
       #prj-list {display: flex; flex-wrap: wrap; justify-content: center; margin:-5px}
       #prj-list>.item {
         display: block;
@@ -247,99 +247,110 @@
 
 </head>
 <body>
-  <audio id="mo-se" preload="auto" src="prj-mouseover.wav"></audio>
-  <div id="container">
-    <header>
-      <a href="index.html" title="Return to splash"> &#8626;</a>
-      <div >Projects</div>
-      <div ></div>
-    </header>
-    <div>
-      <section id="projects">
-      <p>A carefully selected incomplete list of works_</p>
-      <div id="prj-list">
-        <div class="item" style="background-image: url('images/prj-thumb/product-citywitch.png');">
-          <h1 class="item-title">CITYWITCH</h1>
-          <div class="item-desc">
-            <p>Worldbuilding. "8 Witches used to be enough for the world. But times change."</p>
-          </div>
-          <div class="item-links">
-            <a class="inactive">Comic</a>
-            <a class="inactive">Articles</a>
-          </div>
+    <audio id="mo-se" preload="auto" src="prj-mouseover.wav"></audio>
+    <div id="container">
+        <header>
+            <a href="index.html" title="Return to splash"> &#8626;</a>
+            <div>Projects</div>
+            <div></div>
+        </header>
+        <div>
+            <section id="projects">
+                <p>A carefully selected incomplete list of works_</p>
+                <div id="prj-list">
+                    <div class="item" style="background-image: url('images/prj-thumb/product-citywitch.png');">
+                    <h1 class="item-title">CITYWITCH</h1>
+                    <div class="item-desc">
+                        <p>Worldbuilding. "8 Witches used to be enough for the world. But times change."</p>
+                    </div>
+                    <div class="item-links">
+                        <a class="inactive">Comic</a>
+                        <a class="inactive">Articles</a>
+                    </div>
+                    </div>
+                    <div class="item" style="background-image: url('images/prj-thumb/product-kirush3030x.png');">
+                        <h1 class="item-title">Ki-Rush</h1>
+                        <div class="item-desc">
+                            <p>After your recent exceptional performance, you have been invited to race in the Ki-Rush GP.</p>
+                        </div>
+                        <div class="item-links">
+                            <a href="">3030X</a>
+                            <a href="" class="inactive">Database</a>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('images/prj-thumb/product-logobase.jpg');">
+                        <h1 class="item-title">Logobase database</h1>
+                        <div class="item-desc">
+                            <p>A library of logos found among all my projects.</p>
+                        </div>
+                        <div class="item-links">
+                            <a href="logobase.html">Visit</a>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('images/prj-thumb/product-catsup.png');">
+                        <h1 class="item-title">Catsup on Top</h1>
+                        <div class="item-desc">
+                            <p>This is my tomato-cat Catsup. And here is where I document Catsup's adventures.</p>
+                        </div>
+                        <div class="item-links">
+                            <a href="https://www.instagr.am/CatsupOnTop">Instagram</a>
+                            <a href="https://www.catsupontop.com" title="">Database</a>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('images/prj-thumb/product-comms.png');">
+                        <h1 class="item-title">Commissions</h1>
+                        <div class="item-desc">
+                            <p>Visit Auto's page for their services.</p>
+                        </div>
+                        <div class="item-links">
+                            <a href="https://www.automaticspirit.com/comm">Visit</a>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    Evidence of other projects may be discovered and observed elsewhere on the NET_
+                </p>
+                <div class="ext-links-sprite">
+                    <a class="arts" href="https://www.artstation.com/automaticspirit" title="Nagivate to ArtStation_"></a>
+                    <a class="twit" href="https://twitter.com/azezaroo" title="Move to Twitter_"></a>
+                    <a class="insta" href="https://instagram.com/automaticspirit" title="Proceed to Instagram_"></a>
+                </div>
+            </section>
         </div>
-        <div class="item" style="background-image: url('images/prj-thumb/product-kirush3030x.png');">
-          <h1 class="item-title">Ki-Rush</h1>
-          <div class="item-desc">
-            <p>After your recent exceptional performance, you have been invited to race in the Ki-Rush GP.</p>
-          </div>
-          <div class="item-links">
-            <a href="">3030X</a>
-            <a href="" class="inactive">Database</a>
-          </div>
-        </div>
-        <div class="item" style="background-image: url('images/prj-thumb/product-logobase.jpg');">
-          <h1 class="item-title">Logobase database</h1>
-          <div class="item-desc">
-            <p>A library of logos found among all my projects.</p>
-          </div>
-          <div class="item-links">
-            <a href="logobase.html">Visit</a>
-          </div>
-        </div>
-        <div class="item" style="background-image: url('images/prj-thumb/product-catsup.png');">
-          <h1 class="item-title">Catsup on Top</h1>
-          <div class="item-desc">
-            <p>This is my tomato-cat Catsup. And here is where I document Catsup's adventures.</p>
-          </div>
-          <div class="item-links">
-            <a href="http://www.instagr.am/CatsupOnTop">Instagram</a>
-            <a href="http://www.alpha-zero.design/catchcatsup/" title="">Database</a>
-          </div>
-        </div>
-      </div>
-      <p>Evidence of other projects may be discovered and observed elsewhere on the NET_</p>
-      <div class="ext-links-sprite">
-        <a class="arts" href="https://www.artstation.com/automaticspirit" title="Nagivate to ArtStation_"></a>
-        <a class="twit" href="https://twitter.com/azezaroo" title="Move to Twitter_"></a>
-        <a class="insta" href="https://instagram.com/automaticspirit" title="Proceed to Instagram_"></a>
-      </div>
-      </section>
+        <footer>
+            <div class="note">&#9789; ALPHA-ZERO / AUTOMATIC-SPIRIT</div>
+            <div class="links">
+                <a href="index.html">Homepage</a> | <a href="contact.html">Contact</a>
+            </div>
+        </footer>
     </div>
-    <footer>
-      <div class="note">&#9789; ALPHA-ZERO / AUTOMATIC-SPIRIT</div>
-      <div class="links">
-        <a href="index.html">Homepage</a> | <a href="contact.html">Contact</a>
-      </div>
-    </footer>
-  </div>
 
-  <!-- <script>
+    <!-- <script>
     $("#prj-list div").mouseenter(function() {
-      var x = document.getElementById("mo-se");
-      x.play();
-      console.log("Hello world!");
+    var x = document.getElementById("mo-se");
+    x.play();
+    console.log("Hello world!");
     });
-  </script> -->
-  <script>
-  $("#prj-list .item").each(function(i) {
-      if (i != 0) {
-        $("#mo-se")
-          .clone()
-          .attr("id", "mo-se" + i)
-          .appendTo($(this).parent());
-      }
-      $(this).data("beep", i);
-    })
-    .mouseenter(function() {
-      $("#mo-se" + $(this).data("beep"))[0].play();
-    })
-    .mouseleave(function() {
-      $("#mo-se" + $(this).data("beep"))[0].pause();
-      $("#mo-se" + $(this).data("beep"))[0].currentTime = 0;
-    });
-  $("#mo-se").attr("id", "mo-se0");
-  </script>
+    </script> -->
+    <script>
+        $("#prj-list .item").each(function(i) {
+            if (i != 0) {
+                $("#mo-se")
+                .clone()
+                .attr("id", "mo-se" + i)
+                .appendTo($(this).parent());
+            }
+            $(this).data("beep", i);
+        })
+        .mouseenter(function() {
+            $("#mo-se" + $(this).data("beep"))[0].play();
+        })
+        .mouseleave(function() {
+            $("#mo-se" + $(this).data("beep"))[0].pause();
+            $("#mo-se" + $(this).data("beep"))[0].currentTime = 0;
+        });
+        $("#mo-se").attr("id", "mo-se0");
+    </script>
 </body>
 </body>
 </html>
