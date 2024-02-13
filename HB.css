@@ -1,6 +1,8 @@
 /* *** 		HOME BASE 		*** */
 /* This is the sheet made to set base values and global properties */
 
+@charset "UTF-8";
+
 /* IMPORTS	*** */
 
 /*Arimo*/
@@ -15,7 +17,8 @@ a {text-decoration: none;}
 /* FONTS 	*** */
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+    font-size: .8em;
 }
 
 h1, h2, h3, h4, h5, h6 {}
@@ -23,161 +26,162 @@ h1 {}
 
 /* BASE 	*** */
 
-body {
-	width: 100%; height: 100vh;
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	backface-visibility: hidden;
-	animation: bgFade 60s linear infinite 0s;
-	animation-timing-function: ease-in-out;
-	background-image: url(images/splash1.png);
+body, footer {
+    cursor:
+        url(images/pointer.png) 5 5,
+        default;
+}
+a {
+    cursor:
+        url(images/clicker.png) 17 2,
+        pointer;
 }
 
-section{
-    min-height: 100%;
-    display: flex;
+body {
+    display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    height: 100vh;
+}
+
+body {
+    background-color: #2E3023;
+    background-image: url(images/wallpaper.webp);
+    background-position: center;
+    background-size: cover;
+    transition: background-image .75s;
+}
+
+a {}
+
+section#container {
+    display: flex;
+    flex:2 0 auto; 
+    height: auto; 
+/*    background-color: rgba(255,50,50,.25);*/
+    justify-content: center;
+}
+div#splash {
+    display: flex; 
+    flex-wrap: wrap;
+    height: calc( 100vh - 50px ); max-width: 400px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+/*    background-color: rgba(255,50,50,.25);*/
+}
+#splash>* {
+    display:block;
+    margin:.75em;
+    width:100px; height: 120px;
+    vertical-align: bottom; text-align:center;
+}
+#splash :nth-child(1) {order:1}
+#splash :nth-child(2) {order:2}
+#splash :nth-child(3) {order:3}
+#splash :nth-child(4) {order:4}
+#splash :nth-child(5) {order:5}
+#splash :nth-child(6) {order:6}
+#splash :nth-child(7) {order:7}
+#splash :nth-child(8) {order:8}
+#splash :nth-child(9) {order:9}
+
+#splash>a {
+    display:flex;
+    flex-direction:column; 
+    justify-content:flex-end;
+    border-radius: 5px;
     
+    color:white;
+    text-shadow: 1px 1px  black, -1px -1px  black, 0 2px  black, 0 3px black, 1px 3px black, -1px 3px black;
 }
-#splash { /* background-color: rgba(250,250,250,1); */ }
-#splashContent {
-    position:relative;
-	display: block;
-	width: 420px; height:420px;
-    transform: scale(.75);
-	transition: transform .75s;
 
-	/* background-image: url(splash.svg); */
-	background-repeat: no-repeat;
-	background-position: top center;
+#splash span {}
+.splash_icon>div {
+    display: inline-block;
+    width: 100px; height: 100px;
+    background-image: url(images/indexicons.png);   
+    background-repeat: no-repeat;
+    background-size: calc(300px * 1);
+    border:none;
+    filter:drop-shadow(0px 6px 1px rgba(0,0,0,.25));
+}
+.splash_icon:hover>div, .splash_icon:focus>div {
+    background-image: url(images/indexicons_hover.png); 
+}
+#splash .list_icon {order:6}
+.list_icon {}
+.insta {}
+.x_ {background-position:-100px 0;}
+.inprnt {background-position:-200px 0;}
+.catsup {background-position:-200px -100px;}
+.twitch {background-position:0 -100px;}
+.kofi {background-position: 0 -200px;}
+.shop {background-position:-100px -200px;}
+.newf {background-position:-200px -200px;}
+.vgen {background-position: -100px -100px;}
 
-	/* background-color: rgba(250, 250, 250, 0.1);
-	border-radius: 420px; */
-}
-#splashContent img { position: absolute;}
-.objective {
-	position: absolute;
-	display: block;
-	margin: 0;
-	width: 84px; height: 84px;
-	border-radius: 250px;
-	transition: ease-in all .05s;
-	box-shadow:none;
 
-	text-align: center;
-	background-image: url(spritesheet.svg);
-	background-repeat: no-repeat;
-	transform:scale(.75);
-	-webkit-filter: grayscale(1); filter: grayscale(1); opacity: 0.5;
+#splash>a:hover, #splash>a:focus {
+    transform:scale(1.1);
+    background-color:rgba(255,255,255,.5);
 }
-.objective.active {
-	-webkit-filter: grayscale(.3);
-	filter: grayscale(.3);
-	opacity: 1;
-}
-.objective.active:hover, .objective.active:focus {
-	margin: 0;
-	outline: 0px solid transparent;
-	filter: grayscale(0);
-	transform: scale(1);
-	/* box-shadow: 0 0 20px 1px rgba(0,0,0,.4); */
-	transition: ease-out all .2s;
-	z-index: 999;
-}
-.objective:active {
-	transform: scale(.8);
-	transition: all .2s;
-}
-.objective.nst { background-color: rgb(188,42,141) ;}
-.objective.twt { background-color: rgb(29,161,242) ; background-position: -84px 0;}
-.objective.gtb { background-color: rgb(142,36,205) ; background-position: -168px 0;}
-.objective.tch { background-color: rgb(100,65,165) ; background-position: 0px -84px;}
-.objective.gum { background-color: rgb(251,171,70) ; background-position: -84px -84px;}
-.objective.ars { background-color: rgb(19,175,240) ; background-position: -168px -84px}
-.objective {font-size: 0;}
-
-/* .active::before, .active::after {
-	display: block;
-	position:relative;
-	width: 150px; height: 128px;
-	transition: all .03s;
-	background:rgba(200,0,0,1);
-	opacity: 0;
-	visibility: hidden;
-}
-.active::before {
-	left:-90px; top: -50px;
-	content:"";
-}
-.active::after {
-	left: 25px; top:-200px;
-	content:"";
-}
-.active:hover::before,
-.active:focus::before {
-	transform: translateX(-16px); opacity:1;
-	transition: opacity 1s, transform .5s; visibility: visible;
-}
-.active:hover::after,
-.active:focus::after {
-	transform: translateX(16px); opacity:1;
-	transition: opacity 1s, transform .5s; visibility: visible;
-} */
-
 
 footer {
-	position: absolute;
-	z-index: 99;
-	display: flex;
-	justify-content: center;
-	margin-bottom: 1em;
-	width: 100%;
-	bottom: 0;
-	text-align: center;
+    display:flex;
+    width: 100vw; height: 3em;
+    align-items: center;
+    vertical-align: center;
+    justify-content: space-between;
+    
+    text-transform: uppercase;
+    
+    border-top: 1px solid rgba(255,255,255,.1);
+    background-color: linear-gradient(0deg, rgba(77,101,138,.5) 0%, rgba(205,205,205,0.1) 100%);
+    backdrop-filter: blur(3px);
 }
-footer a {
-	display: inline-block;
-	padding: .25em 1em;
-	text-transform: uppercase;
-	color: black;
-	transition: all .6s;
-	background-color: #ffffff;
+footer #tb_start, footer #tb_end {
+    display: block; 
+    aspect-ratio: 1/1;
+    height: calc(100% - .8em); max-width: 50%;
+    margin: 0 .5em;
+    
+    background-image:url(images/taskbaricons.png);
+    background-repeat: no-repeat;
+    background-size: auto 28px;
+    
+} 
+footer #tb_end { aspect-ratio: 2/1; background-position: -28px 0;}
+footer #taskbar>a {
+    flex: 0 0 auto;
+    padding: .5em .5em;
+    background-color:rgba(205,205,205,.1);
+    margin-left:.5em;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,.25);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    transition: all .75s;
 }
-footer a:hover, footer a:focus {
-	transition: all .1s;
-	opacity: 1;
-	color: white;
+footer #taskbar>a:any-link {
+    color: white;
+    text-decoration: none;
 }
-footer a:first-child { border-top-left-radius: .25em; border-bottom-left-radius: .25em; }
-footer a:last-child { border-top-right-radius: .25em; border-bottom-right-radius: .25em; }
-.kofi {
-	flex-grow: 0;
-	width: 1em;
-	background: url('kofi.svg') no-repeat center;
-    background-color: #FFE458;
-	background-size: 20px ;
-}
-.prj:hover, .prj:focus {background-color: #676755;}
-.inf:hover, .inf:focus {background-color: #9146D4;}
-.kofi:hover, .kofi:focus {background-color: #29ABE0;}
-
-@keyframes bgFade {
-	0% {background-image: url(images/splash1.png);}
-	9% {background-image: url(images/splash1.png);}
-	16% {background-image: url(images/splash2.png);}
-	34% {background-image: url(images/splash2.png);}
-	41% {background-image: url(images/splash3.png);}
-	59% {background-image: url(images/splash3.png);}
-	66% {background-image: url(images/splash4.png);}
-	84% {background-image: url(images/splash4.png);}
-	91% {background-image: url(images/splash1.png);}
+footer #taskbar>a:last-child {margin-right:.5em}
+footer #taskbar>a:hover, footer #taskbar>a:focus {
+    color: black;
+    background-color:rgba(255,255,255,.8);
+    transition: all .25s;
 }
 
-@media (min-width: 420px) {
-	#splashContent {
-		transform: scale(1);
-	}
-}
+/*
+@media( min-width: 820px ) {
+    section#container {
+    justify-content: flex-start;
+    }
+    div#splash {
+        justify-content: flex-start;
+        align-content: flex-start;
+        flex-direction: column;
+    }
+    #splash .list_icon { order: 1;}
+}*/

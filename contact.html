@@ -1,260 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AUTOMATICSPIRIT (MANUAL)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Saira:ital@0;1&display=swap" rel="stylesheet">
 
-    <!-- tilt js for the card from https://micku7zu.github.io/vanilla-tilt.js/ -->
-    <!-- - - - css shake used for return button from http://csshake.surge.sh/ --->
+    <link rel="stylesheet" href="spruesheet.css">
 
-    <meta name="language" content="en">
-    <meta name="keywords" content="" />
-    <meta name="description" content="contact the artist ALPHA-ZERO / AUTOMATIC-SPIRIT." />
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <title>ALPHA-ZERO (CONTACT)</title>
-	<link rel=icon href="favicon.png" type="image/png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="glam.css" type="text/css"> -->
-  <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
-
-	<base target="_blank">
-	<script src="modernizr81475.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<!-- <script src="jquery-3.3.1.slim.min.js" type="text/javascript"></script> -->
-
-  <script type="text/javascript">
-		$(document).ready(function(){
-			$(window).scroll(function(){ //Runs this function every time a scroll event is recognised
-				if ($(this).scrollTop() > 256) { //if this.scrollTop(distance from top) value is greater than x
-					$('#scrollTopbtn').css({"bottom":"32px","opacity":"1"});
-				} else {
-					$('#scrollTopbtn').css({"bottom":"-64px","opacity":"0"});
-				}
-				if ($(this).scrollTop() < 400) { // If this.scrollTop(distance from top) is less than 400, do this. This is for hiding and showing a down button.
-				}
-			});
-
-			$('#scrollTopbtn').click(function () { //Animate the toTop button
-				$('body,html').animate({scrollTop: 0}, 600);
-				return false;
-			});
-
-			$('a[href*=#]:not([href=#])').click(function() {
-				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-					var target = $(this.hash);
-					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-					if (target.length) {
-						$('html,body').animate({
-							scrollTop: target.offset().top
-						}, 600);
-						return false;
-					}
-				}
-			});
-		});
-	</script>
-    <style type="text/css">
-      /* reset */
-      body, p, h1, h2, h3, h4, h5 h6 { padding: 0; margin: 0;}
-
-      :root {
-        --text-color: black;
-        --primary-color: ;
-        --secondary-color: ;
-        --accent-color: ;
-        --bg-color: #dadada;
-      }
-
-      html {}
-      body {min-height: 100vh;}
-      p, h1, h2 ,h3 ,h4 ,h5, h6 {}
-      a, a:visited {color: var(--text-color); text-decoration: none;}
-
-      body {
-        font-family: 'Merriweather', serif;
-        background-image: url('images/bdrop.png');
-        background-position: top center;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-      p {text-align: justify;}
-
-      header, section:not(#contact), footer { margin: 10px; display: block;}
-
-      header {}
-      section {}
-      footer {}
-
-      nav {
-        margin: 10px;
-        display: flex;
-        font-size: .8em;
-      }
-
-      nav>a:visited {color: var(--text-color);}
-      nav>a {
-        display: inline-block;
-        padding: 5px 10px; margin: -5px 5px -5px -10px;
-        border-radius: 0 30px 30px 0;
-        transition: all .2s;
-      }
-      nav>a:hover {background-color: var(--text-color); color: var(--bg-color);}
-      nav>hr {
-        border: none; flex-grow: 3;
-        border-top: 3px double var(--primary-color);
-      }
-
-      section#descriptive {}
-      #descriptive p {
-        margin-bottom: 15px;
-      }
-
-      section#links-out {
-        padding-top: 24px; margin-top: 50px;
-        display: flex;
-        justify-content: center;
-      }
-
-      #links-out>a{
-        opacity: .8;
-        margin: 5px;
-        width: 30px; height: 30px;
-        background-size: 60px;
-        background-image: url(images/prj-sprite.png);
-        border-radius: 30px;
-        transition: all 1s;
-      }
-      .arts {}
-      .inst { background-position: 0px -120px; }
-      .gith { background-position: -30px 0px; }
-      .payh { background-position: -30px -60px; }
-      .twch { background-position: -30px -120px; }
-      .twtt { background-position: 0 -60px; }
-      #links-out>a:hover {
-        opacity: 1;
-        transform: translateY(-5px);
-        background-color: #ffffffab;
-        box-shadow: 0 5px 15px #00000075;
-        transition: all .1s;
-      }
-
-      section#contact {
-        padding: 275px 0 100px ; margin: -250px 0 -50px;
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: center top;
-        text-align: center;
-        /* background-color: #f443361a; */
-        /* background-size: 75%; */
-      }
-
-      #contactCard {
-        display: inline-block;
-        padding-top: 166px;
-        width: 510px; height: 146px;
-        background: url(images/contact-card.png) no-repeat;
-        text-align: center;
-
-        border-radius: 2px;
-        box-shadow: 0 8px 32px rgba(30,30,30,.2);
-        transition: all .5s;
-      }
-      #contactCard:hover {
-        box-shadow: 0 8px 32px rgba(30,30,30,.5);
-      }
-      #contactCard a {
-        display: block;
-        font-family: 'Raleway', sans-serif;
-        color: white;
-        font-size: 24px;
-        text-transform: uppercase;
-        transition: all .4s;}
-      #contactCard a:hover {text-shadow: 0 0 8px rgba(255, 255, 255,.8);}
-
-      footer { padding-bottom: 25px; margin-bottom: 25px; border-bottom: solid 1px var(--primary-color);}
-      footer>a { margin-bottom: 5px; font-style: italic; text-decoration: underline;}
-      footer>a:hover { background-color: var(--text-color); color: var(--bg-color); }
-
-      @media (prefers-color-scheme: light) {
-        :root {
-            --text-color: #212020;
-            --primary-color: #212020;
-            --secondary-color: ;
-            --accent-color: ;
-            --bg-color: #fff0d3;
-        }
-
-        .dialogue p {
-          box-shadow: 0 2px 8px 1px rgba(0, 0, 0, .34); ;
-        }
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --text-color: #f5f3f0;
-          --primary-color: #f5f3f0;
-          --secondary-color: #29292e;
-          --accent-color: #29292e;
-          --bg-color: #4c4b44;
-        }
-        #links-out>a {filter:invert(1);}
-      }
-
-      @media ( min-width: 420px ) {
-      }
-
-      @media ( min-width: 560px ) {
-        section#contact {
-          background-image: url(images/contact-card-bg.png);
-        }
-      }
-
-      @media ( min-width: 800px ) {
-      }
-
+    <style>
     </style>
 </head>
 <body>
-  <nav>
-    <a href="" title="Return to Splash page" target="_self">RTN</a>
-    <hr>
-  </nav>
-  <header>
-  </header>
-  <section id="descriptive">
-    <p>
-      Upon exiting the cavern, you come face to face with a hideous creature standing on its 2 legs, that has 2 other limbs on the sides of its body - Several other tinier limbs protrude from them.<br>
-      It appears covered in dried flesh and even more protected by articles of fabric which appears to keep it warm.
-    </p>
-    <p>"I'm <i>ALPHA-ZERO</i>" it announces, the sound vibrating out of a wet exposed orifice on the large furry bulb that extends out from the top of its soggy torso.</p>
-    <p>"Or perhaps, also <i>automatic-spirit</i>."</p>
-    <p>
-      "I'm a freelance <span>illustrator</span> and digital designer, and I like to draw things. I also dabble in front-end web design and write silly things."<br>
-      You gag in disgust at the sight and the sounds emitting from the strange being.<br>
-      <i>How could something so small and innocent come out of a place called New Zealand?</i>
-    </p>
-    <p>One of its thin squishy limbs extends and it hands you a hard rectangular sheet of parchment. It reads:</p>
-  </section>
-  <section id="links-out"> <!-- laces out -->
-    <a class="arts" href="https://www.artstation.com/automaticspirit" title="ArtStation"></a>
-    <a class="inst" href="https://www.instagram.com/automaticspirit/" title="Instagram"></a>
-    <a class="gith" href="https://github.com/alpha-zero" title="Github"></a>
-    <a class="payh" href="" title="Payhip (Digital Store)"></a>
-    <a class="twch" href="https://www.twitch.tv/automaticspirit" title="Twitch (Livestreaming)"></a>
-    <a class="twtt" href="https://twitter.com/azezaroo" title="Twitter"></a>
-  </section>
-  <section id="contact">
-    <div id="contactCard" data-tilt data-tilt-max="10" data-tilt-scale="1.02">
-        <!-- This is my actual business/contact card :smirk: -->
-        <a href="http://alpha-zero.design" title="You are here !">http://alpha-zero.design</a>
-        <a href="mailto:alpha-zero@live.com" style="margin-top: 4px; font-size: 32px" title="Contact address">alpha-zero@live.com</a>
+    <div id="container">
+        <header>
+            <div class="titlef hr_grade"><a href="https://www.automaticspirit.com">Perfect Grade</a></div>
+            <div class="serif" style="font-size: 2em;">AS-0B-A0</div>
+            <h1>AUTOMATICSPIRIT</h1>
+            <div class="serif">Artist / Illustrator (Bread ver.)</div>
+        </header>
+        <section id="warning_note" class="container_block">
+            <div>
+                <details open>
+                    <summary>WARNING</summary>
+                    <li><strong>CHOKING HAZARD. </strong>Contains small parts.</li>
+                    <li>Despite bread. Not edible.</li>
+                </details>
+                <details open>
+                    <summary>CAUTION</summary>
+                    <li>Be cautious of sharp parts and edges. Take care when handling.</li>
+                    <li>Avoid excessive pressure when handling parts. Some parts may be fragile and break.</li>
+                </details>
+            </div>
+        </section>
+        <section id="parts" class="container_block">
+           <h1>Parts list</h1>
+            <img src="images/contactsprue.webp"/>
+        </section>
+        <section id="descriptors" class="container_block">
+           <h1>AUTO (Bread version)</h1>
+            Automaticspirit in their classic form: sitting. Practiced in digital art with space in the center for a brain. (sold separately) 
+        </section>
+        <section id="exlinks" class="container_block">
+            <p>Complete your collection at the following locations:</p>
+            <div class="exlink_list" class="">
+                <a href="https://www.instagram.com/automaticspirit/" title="Instagram">instagram<span>automaticspirit</span></a>
+                <a href="https://www.twitch.tv/automaticspirit/" title="">twitch<span>automaticspirit</span></a>
+                <a href="https://www.ko-fi.com/automaticspirit" title="Ko-Fi">Ko-Fi<span>automaticspirit</span></a>
+                <a href="https://www.twitter.com/azezaroo" title="Twitter / X">twitter / X<span>azezaroo</span></a>
+                <a href="https://www.vgen.co/automaticspirit/" title="VGEN">VGEN<span>automaticspirit</span></a>
+            </div>
+        </section>
+        <section id="form" class="container_block">
+            <form id="fs-frm" name="contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbnrzor" method="post">
+                <h1>contact form</h1>
+                <p>For any issues or inquiries, complete the following form.</p>
+                <fieldset id="fs-frm-inputs">
+                    <input type="text" name="name" id="name" placeholder="Preferred Name" required="">
+                    <label for="name">Preferred Name</label>
+                    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+                    <label for="email-address">Contact Email</label>
+                    <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
+                    <label style="margin-top: -.8em" for="message">Message</label>
+                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                </fieldset>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
     </div>
-  </section>
-  <footer>
-    <a target="_self" href="javascript:history.go(-1)" title="Return to whence you came.">If you wish to retreat from this creature and call it a day, turn to page 1.</a><br>
-    <a target="_self" href="" title="Onwards, to the project page !">You decide to ask them about their current projects. Turn to page 112.</a>
-  </footer>
-  <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script></script>
 </body>
+
 </html>
