@@ -104,6 +104,7 @@ section h1 {
     width: 100%; max-width: 500px;
 }
 li::marker {transform:scale(2)}
+#descriptors a:any-link {color: var(--accent-color) ;text-decoration: underline;}
 
 .exlink_list {
     display: flex;
@@ -128,7 +129,7 @@ li::marker {transform:scale(2)}
 .exlink_list a:any-link { color: var(--bg-color); }
 .exlink_list a:hover, .exlink_list a:focus{ color: var(--main-color); background-color: var(--accent-color) }
 
-section form { padding:.4em; border: 1px solid var(--main-color); }
+section form { padding:.4em; border: 1px dashed var(--main-color); }
 #fs-frm h1 {width: auto; display:block;}
 fieldset { margin: 0; border:var(--border-width) solid var(--main-color); }
 form input, form textarea {font-family: 'Saira', sans-serif; font-size:1em;}
