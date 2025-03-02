@@ -1,366 +1,100 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <!--  -->
-
     <meta name="language" content="en">
-    <meta name="keywords" content="alpha-zero,automatic-spirit,automaticspirit,design,illustration,new-zealand,street-art,tentacles" />
-    <meta name="description" content="Creator AUTOMATICSPIRIT; Illustration and design || Current projects" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="Creator AUTOMATICSPIRIT; Illustration and design. Personal. Sleek. Human. Tentacles." />
     <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>PROJECTS | AUTOMATICSPIRIT (ILLLUSTRATION AND DESIGN)</title>
-    <link rel=icon href="favicon.png" type="image/png">
+    <title>[PROJECTS] automaticspirit </title>
+	<link rel=icon href="favicon.png" type="image/png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="glam.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+	
+    <base target="_blank">
+    <link rel="stylesheet" type="text/css" href="projecss.css">
     <style type="text/css">
-      :root {
-      }
-
-      * { cursor: url('prj-c.png') 16 16, auto;}
-      a { cursor: url('prj-c.png') 16 16, auto}
-
-      body {
-        background-color: var(--bg-color);
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-        color: var(--font-color);
-
-        background-image: url(images/prj-bg.png); /* bg is 50% grey pattern 30% opacity */
-        background-position: center center;
-      }
-
-      h1 {font-family: 'Lato', sans-serif;}
-
-      header {
-        margin-top: 4px;
-        display: flex;
-        font-size: 2em;
-        font-weight: bold;
-        font-family: 'Lato', sans-serif;
-        text-transform: uppercase;
-        flex-wrap: nowrap;
-        opacity: .8;
-      }
-      header>div {
-      }
-      header>*:nth-child(odd) {
-        margin: 6px 0;
-        background-color: var(--primary-color);
-      }
-      header>*:first-child {
-        margin-right: 8px; padding: 0 8px;
-        font-size: .5em;
-        font-weight: 400;
-        color: var(--bg-color);
-      }
-      header>*:nth-child(2) {
-        margin-right: 8px;
-      }
-      header>*:nth-child(n+3) {
-        flex-grow:100;
-      }
-      header>a{ transition: all .6s; box-shadow: 0px 0 var(--primary-color); }
-      header>a:hover, header>a:focus {
-        background-color: var(--accent-color); transition: all .1s; transform: translateX(-8px);
-        box-shadow: 8px 0 var(--accent-color);
-      }
-
-      div#container {
-          margin: 0 auto;
-          max-width: 620px;
-      }
-      section#projects {margin-bottom: 16px;}
-      #projects>p { display: block; text-align:justify; opacity: .8;}
-      #prj-list {display: flex; flex-wrap: wrap; justify-content: center; margin:-5px}
-      #prj-list>.item {
-        display: block;
-        opacity: .4;
-        margin: 5px;
-        width: calc(100% - 10px);
-        /* width: 200px;  */
-        height: 260px;
-        background-color: #16161620;
-        transition: opacity 1s, transform 1s, box-shadow 1s;
-
-        position: relative;
-        overflow: hidden;
-        background-position: center center;
-        background-size: cover;
-      }
-      #prj-list>.item:hover, #projects>.item:focus, .item-links:hover .item {
-        opacity: 1;
-        transform: translate(0, -4px);
-        box-shadow: 0px 4px 0 #16161640;
-        transition: all .1s;
-      }
-
-      .item>.item-title {
-        display: block;
-        margin: 0; padding: .2em .2em;
-        font-size: 1.1em;
-        background-color: var(--primary-nofade);
-        color: var(--tertiary-color);
-        font-weight: normal;
-        text-transform: uppercase;
-        transform: translateY(-2em);
-        transition: transform .25s;
-      }
-      .item>.item-desc {
-        display: block;
-        position: absolute;
-        margin: .4em;
-        top: 1.7em; left: 0;
-        opacity: 0;
-        transition: .34s;
-        color: var(--tertiary-color);
-      }
-      .item-desc>p {margin: 0; background-color: var(--primary-nofade); display: unset;}
-      .item > .item-links {
-        display: flex;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        transform: translateY(2em);
-        transition: transform .25s;
-      }
-        .item-links>a {
-          flex-grow: 1;
-          padding: .2em 0;
-          text-align: center;
-          color: var(--bg-color);
-          background-color: var(--primary-nofade);
-          text-decoration: none;
-      }
-
-      div.item:hover .item-title {transform: translateY(0);}
-      div.item:hover .item-desc {opacity: 1;}
-      div.item:hover .item-links {transform: translateY(0);}
-       .item-links>a, .item-links>a:visited { }
-       .item-links>a:hover {color:var(--font-color); background-color: var(--secondary-color);}
-       .item-links>a.inactive {opacity: .5 ; -webkit-filter:grayscale(100%); text-decoration: line-through; cursor: default;}
-
-      .ext-links-sprite {
-        opacity: .8;
-        display: flex;
-        justify-content: center;
-      }
-      .ext-links-sprite>a {
-        display: block;
-        width: 30px; height: 30px;
-        background-size: 60px;
-        background-image: url(images/prj-sprite.png);
-        opacity: 1;
-        transition: background-position .2s;
-
-        border-left-color: var(--primary-color);
-        border-left-style: solid;
-        border-left-width: 1px;
-      }
-      .ext-links-sprite>a:last-child {
-        border-right-color: var(--primary-color);
-        border-right-style: solid;
-        border-right-width: 1px;}
-      .ext-links-sprite>a:hover {}
-      .arts:hover {background-position:0 -30px;}
-      .twit {background-position: 0px -60px;}
-      .twit:hover {background-position: 0px -90px;}
-      .insta {background-position: 0px -120px;}
-      .insta:hover {background-position: 0px -150px;}
-
-      footer {
-        border-top: solid 1px var(--primary-color);
-        padding: 8px 0 8px;
-        opacity: .8;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      footer div {text-align: center;}
-      footer div.note {font-size: .5em; }
-      footer div.links {}
-      footer a, footer a:visited { display: inline-block; color: var(--font-color)}
-      footer a:hover {background-color: var(--primary-color); color: var(--bg-color)}
-
-      body::-webkit-scrollbar {
-        width: 1em;
-      }
-
-      body::-webkit-scrollbar-track {
-        /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
-      }
-
-      body::-webkit-scrollbar-thumb {
-        background-color: var(--primary-nofade);
-        outline: 1px solid slategrey;
-      }
-      body::-webkit-scrollbar-thumb:hover {
-        background-color: var(--primary-color);
-      }
-
-      @media (prefers-color-scheme: light) {
-        :root {
-          --font-color: #161616;
-          --primary-color: #161616;
-          --primary-nofade: #3e3e3a;
-          --secondary-color: #dfbd60;
-          --tertiary-color: #dcdcc8;
-          --accent-color: #d75353;
-          --bg-color: #dcdcc8;
-        }
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --font-color: #dcdcc8;
-          --primary-color: #dcdcc8;
-          --primary-nofade: #dcdcc8;
-          --secondary-color: #dfbd60;
-          --tertiary-color: #3e3e3a;
-          --accent-color: #d75353;
-          --bg-color: #3e3e3a;
-        }
-        * { cursor: url('prj-c-i.png') 16 16, auto;}
-        .ext-links-sprite>a { background-image: url('images/prj-sprite-invert.png');}
-      }
-
-      @media ( min-width: 420px ) {
-        #prj-list>.item {
-          width: calc(50% - 10px);
-        }
-        #prj-list>.item:hover, #projects>.item:focus {
-          transform: translate(-4px, -4px);
-          box-shadow: 4px 4px 0 #16161640;
-        }
-      }
-
-      @media only screen
-      and ( min-width:620px ) {
-          #prj-list { justify-content: left; }
-          #prj-list>.item {
-            width: calc(33.33% - 10px);
-          }
-          footer { flex-direction: row; justify-content: space-between;}
-          footer div.note {order: 99;}
-        }
     </style>
-
 </head>
 <body>
-    <audio id="mo-se" preload="auto" src="prj-mouseover.wav"></audio>
     <div id="container">
         <header>
-            <a href="index.html" title="Return to splash"> &#8626;</a>
-            <div>Projects</div>
-            <div></div>
+            <a id="rtn_button" class="" title="return" href="index.html">&#8626;</a>
+            <h1>Projects</h1>
+            <div id="fillblock" class=""></div>
+            <a id="fwd_button" class="" title="details" href="contact.html">&#8625;</a>
         </header>
-        <div>
-            <section id="projects">
-                <p>A carefully selected incomplete list of works_</p>
-                <div id="prj-list">
-                    <div class="item" style="background-image: url('images/prj-thumb/product-citywitch.png');">
-                    <h1 class="item-title">CITYWITCH</h1>
-                    <div class="item-desc">
-                        <p>Worldbuilding. "8 Witches used to be enough for the world. But times change."</p>
-                    </div>
-                    <div class="item-links">
-                        <a class="inactive">Comic</a>
-                        <a class="inactive">Articles</a>
-                    </div>
-                    </div>
-                    <div class="item" style="background-image: url('images/prj-thumb/product-kirush3030x.png');">
-                        <h1 class="item-title">Ki-Rush</h1>
-                        <div class="item-desc">
-                            <p>After your recent exceptional performance, you have been invited to race in the Ki-Rush GP.</p>
+        <main>
+            <section id="majorWorks">
+                <h1>Major</h1>
+                <ul>
+                    <li style="background-image: url(images/prj-thumb/item-catsup.webp)">
+                        <h2>Catsup on Top</h2>
+                        <div class="item-desc">A story of a cat who is also a tomato.</div>
+                        <div class="item-out">
+                            <a href="https://www.webtoons.com/en/canvas/catsup-on-top/list?title_no=665587">WEBTOON</a>
+                            <a href="https://www.catsupontop.com/">HUB</a>
                         </div>
-                        <div class="item-links">
-                            <a href="">3030X</a>
-                            <a href="" class="inactive">Database</a>
+                    </li>
+                    <li style="background-image: url(images/prj-thumb/item-kirush.webp)">
+                        <h2>Ki-Rush 3034X</h2>
+                        <div class="item-desc">A collaborative story telling group based in a  space-fairing space-racing universe by auto.</div>
+                        <div class="item-out">
+                            <a class="inactive-link" href="">invitation</a>
+                            <a class="inactive-link" href="">HUB</a>
+                            <a href="https://kirush3030x.webflow.io/">original</a>
                         </div>
-                    </div>
-                    <div class="item" style="background-image: url('images/prj-thumb/product-logobase.jpg');">
-                        <h1 class="item-title">Logobase database</h1>
-                        <div class="item-desc">
-                            <p>A library of logos found among all of auto's projects.</p>
-                        </div>
-                        <div class="item-links">
-                            <a href="logobase.html">Visit</a>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url('images/prj-thumb/product-catsup.png');">
-                        <h1 class="item-title">Catsup on Top</h1>
-                        <div class="item-desc">
-                            <p>"This is my tomato-cat Catsup. And here is where I document Catsup's adventures."</p>
-                        </div>
-                        <div class="item-links">
-                            <a href="https://www.instagr.am/CatsupOnTop">Instagram</a>
-                            <a href="https://www.catsupontop.com" title="">Database</a>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url('images/prj-thumb/product-streamcredits.png');">
-                        <h1 class="item-title">Stream Credits</h1>
-                        <div class="item-desc">
-                            <p>The ending screen for Auto's stream. Featuring friends.</p>
-                        </div>
-                        <div class="item-links">
-                            <a href="http://www.automaticspirit.com/Streamcredits/">Visit</a>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url('images/prj-thumb/product-comms.png');">
-                        <h1 class="item-title">Commissions</h1>
-                        <div class="item-desc">
-                            <p>Visit Auto's page for their services.</p>
-                        </div>
-                        <div class="item-links">
-                            <a href="https://www.automaticspirit.com/comm">Visit</a>
-                        </div>
-                    </div>
-                </div>
-                <p>
-                    Evidence of other projects may be discovered and observed elsewhere on the NET_
-                </p>
-                <div class="ext-links-sprite">
-                    <a class="arts" href="https://www.artstation.com/automaticspirit" title="Nagivate to ArtStation_"></a>
-                    <a class="twit" href="https://twitter.com/azezaroo" title="Move to Twitter_"></a>
-                    <a class="insta" href="https://instagram.com/automaticspirit" title="Proceed to Instagram_"></a>
-                </div>
+                    </li>
+                </ul>
             </section>
-        </div>
+            <section id="minorWorks">
+                <h1>Minor</h1>
+                <ul>
+                    <li style="background-image: url(images/prj-thumb/item-streamcredits.webp)">
+                        <h2>StreamCredits</h2>
+                        <div class="item-desc">A collection of run animations done while livestreaming.</div>
+                        <div class="item-out">
+                            <a href="https://www.automaticspirit.com/Streamcredits/">Webpage</a>
+                        </div>
+                    </li>
+                    <li style="background-image: url(images/prj-thumb/item-logobase.webp)">
+                        <h2>Logobase</h2>
+                        <div class="item-desc">An old collection of logos.</div>
+                        <div class="item-out">
+                            <a href="logobase.html">Page</a>
+                        </div>
+                    </li>
+                    <li class="inactive" style="">
+                        <h2>Character Database</h2>
+                        <div class="item-desc">A collection of auto's original characters for referencial material.</div>
+                        <div class="item-out">
+                            <a class="inactive-link" href="">Page</a>
+                        </div>
+                    </li>
+                    <li class="inactive" style="background-image: url(images/prj-thumb/item-concata.webp)">
+                        <h2>Convention catalogue</h2>
+                        <div class="item-desc">A catalogue of auto's merch for local events.</div>
+                        <div class="item-out">
+                            <a class="inactive-link" href="">Page</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="elseWorks">
+                <p>Other projects may exist on the NET<span class="flicker">_</span></p>
+            </section>
+        </main>
         <footer>
-            <div class="note">&#9789; ALPHA-ZERO / AUTOMATIC-SPIRIT</div>
-            <div class="links">
-                <a href="index.html">Homepage</a> | <a href="contact.html">Contact</a>
-            </div>
+            <nav>
+                <a class="" title="" href="index.html">Home</a>
+                •
+                <a class="" title="" href="contact.html">Info</a>
+            </nav>
+            <span>automaticspirit</span>
         </footer>
     </div>
-
-    <!-- <script>
-    $("#prj-list div").mouseenter(function() {
-    var x = document.getElementById("mo-se");
-    x.play();
-    console.log("Hello world!");
-    });
-    </script> -->
-    <script>
-        $("#prj-list .item").each(function(i) {
-            if (i != 0) {
-                $("#mo-se")
-                .clone()
-                .attr("id", "mo-se" + i)
-                .appendTo($(this).parent());
-            }
-            $(this).data("beep", i);
-        })
-        .mouseenter(function() {
-            $("#mo-se" + $(this).data("beep"))[0].play();
-        })
-        .mouseleave(function() {
-            $("#mo-se" + $(this).data("beep"))[0].pause();
-            $("#mo-se" + $(this).data("beep"))[0].currentTime = 0;
-        });
-        $("#mo-se").attr("id", "mo-se0");
-    </script>
 </body>
 </html>

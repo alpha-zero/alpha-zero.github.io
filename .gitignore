@@ -6,7 +6,9 @@
 *.private.*
 *.afphoto
 *.clip
+*_donotinclude
+*.afdesign
 
 # ignore old files
 *.old.*
-_old
+*_old

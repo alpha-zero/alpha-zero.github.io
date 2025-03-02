@@ -19,7 +19,6 @@ body {
     color: var(--main-color);
     font-family: 'Saira', sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {}
 h1, h2, h3, .titlef {font-family: 'Anton', sans-serif; text-transform: uppercase;}
 
 .serif {font-family: 'Times New Roman', serif; text-transform: uppercase; font-weight: bold;}
@@ -160,7 +159,7 @@ form input[text=area]:focus {
 
 @media only screen and (min-width:720px) {
     #container {
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "head head"
             "warn warn"
