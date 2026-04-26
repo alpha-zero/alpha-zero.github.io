@@ -28,10 +28,10 @@
 <body>
     <div id="container">
         <header>
-            <a id="rtn_button" class="" title="return" href="index.html" target="_self">&#8626;</a>
+            <a class="rtn_button" title="return" href="index.html" target="_self">&#8626;</a>
             <h1>Projects</h1>
-            <div id="fillblock" class=""></div>
-            <a id="fwd_button" class="" title="details" href="contact.html" target="_self">&#8625;</a>
+            <div class="fillblock"></div>
+            <a class="fwd_button" title="details" href="#info_block" target="_self">&#8625;</a>
         </header>
         <main>
             <section id="majorWorks">
@@ -47,7 +47,7 @@
                     </li>
                     <li style="background-image: url(images/prj-thumb/item-kirush.webp)">
                         <h2>Ki-Rush 3034X</h2>
-                        <div class="item-desc">A collaborative story telling group based in a  space-fairing space-racing universe by auto.</div>
+                        <div class="item-desc">A creative story telling group exercise based in a futuristic setting by auto.</div>
                         <div class="item-out">
                             <a class="inactive-link" href="">invitation</a>
                             <a class="inactive-link" href="">HUB</a>
@@ -66,11 +66,11 @@
                             <a class="inactive-link" href="">Page</a>
                         </div>
                     </li>
-                    <li class="inactive" style="background-image: url(images/prj-thumb/item-concata.webp)">
+                    <li class="" style="background-image: url(images/prj-thumb/item-concata.webp)">
                         <h2>Convention catalogue</h2>
                         <div class="item-desc">A catalogue/showcase of auto's merch for local events.</div>
                         <div class="item-out">
-                            <a class="inactive-link" href="">Page</a>
+                            <a class="" href="/examples">Page</a>
                         </div>
                     </li>
                     <li class="" style="">
@@ -99,12 +99,44 @@
             <section id="elseWorks">
                 <p>Other projects may exist on the NET<span class="flicker">_</span></p>
             </section>
+            <section id="info_block">
+                <div class="block_head">
+                    <a class="rtn_button" title="return" href="index.html" target="_self">&#8626;</a>
+                    <h1>Contact</h1>
+                    <div class="fillblock"></div>
+                </div>
+                <div class="info_block_container">
+                    <div class="contact_info">auto is an illustrator based in New Zealand who starts a lot of projects like comics, animations, and just worldbuilding things. Below are links to their profiles on different parts of the NET.</div>
+                    <div class="contact_link">
+                        <a href="https://bsky.app/profile/automaticspirit.com" title="Bluesky">bsky</a>
+                        <a href="https://www.instagram.com/automaticspirit" title="instagram.com/automaticspirit">ig</a>
+                        <a href="https://www.inprnt.com/gallery/automaticspirit/" title="inprnt/automaticspirit">inprnt</a>
+                        <a href="https://ko-fi.com/automaticspirit" title="ko-fi.com/automaticspirit">ko-fi</a>
+                        <a href="https://substack.com/@automaticspirit" title="substack.com/@automaticspirit">substack</a>
+                        <a href="https://www.twitch.tv/automaticspirit" title="twitch.tv/automaticspirit">twitch</a>
+                        <a href="https://vgen.co/automaticspirit" title="vgen.co/automaticspirit">vgen</a>
+                        <a href="https://x.com/azezaroo" title="x.com/azezaroo">x</a>
+                    </div>
+                    <div class="contact_form">
+                        <form id="formtable" name="contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbnrzor" method="post">
+                            <h1>contact form</h1>
+                            <p>If you have any questions, fill out the email form here.</p>
+                            <fieldset id="formtable_inputs">
+                                <input type="text" name="name" id="name" placeholder="Name" required="">
+                                <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+                                <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
+                                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                            </fieldset>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <nav>
                 <a class="" title="homepage" href="index.html" target="_self">Home</a>
                 •
-                <a class="" title="about page" href="contact.html" target="_self">Info</a>
             </nav>
             <span>automaticspirit</span>
         </footer>
